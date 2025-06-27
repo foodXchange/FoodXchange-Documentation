@@ -1,0 +1,75 @@
+FoodXchange-Docs Directory Report
+Generated: 2025-06-27 09:42:57
+================================================================================
+
+SUMMARY
+-------
+Root Path: C:\Users\foodz\Documents\GitHub\Development\FoodXchange-Docs
+Total Directories: 177
+Total Files: 241
+Total Size: 13996.15 KB
+
+FILE TYPES
+----------
+No Extension : 205 files
+.md : 15 files
+.sample : 14 files
+.ps1 : 5 files
+.gitattributes : 1 files
+.gitignore : 1 files
+DIRECTORY STRUCTURE
+-------------------├── .github/
+│   ├── workflows/
+├── 01-Progress/
+│   ├── Chat-Sessions/
+│   │   ├── 2025-06-27-session.md
+│   ├── Daily-Logs/
+│   ├── Milestones/
+│   ├── Templates/
+│   │   ├── daily-log-template.md
+│   │   ├── milestone-template.md
+│   │   ├── session-template.md
+│   │   ├── weekly-summary-template.md
+│   ├── Weekly-Summaries/
+│   ├── current-status.md
+│   ├── project-state-tracker.md
+├── 02-Architecture/
+│   ├── API-Specs/
+│   ├── Decisions/
+│   ├── Diagrams/
+│   ├── Templates/
+│   │   ├── adr-template.md
+│   ├── overview.md
+├── 03-Scripts/
+│   ├── Deployment/
+│   ├── PowerShell/
+│   │   ├── FoodXchange-Diagnostic.ps1
+│   │   ├── FoodXchange-Manager.ps1
+│   ├── Testing/
+│   ├── Utilities/
+│   │   ├── backup-project.ps1
+│   │   ├── backup-script-documentation.md
+│   ├── README.md
+├── 04-Development/
+│   ├── Best-Practices/
+│   ├── Code-Standards/
+│   │   ├── development-standards.md
+│   ├── Guides/
+│   │   ├── progress-tracking-guide.md
+│   ├── Setup-Guides/
+│   │   ├── quick-setup-instructions.md
+├── 06-Planning/
+│   ├── Meeting-Notes/
+│   ├── Roadmaps/
+│   ├── User-Stories/
+├── 07-Resources/
+│   ├── External-Docs/
+│   ├── Research/
+│   ├── Tutorials/
+├── .gitattributes
+├── .gitignore
+├── create-all-docs.ps1
+├── Create-Backup.ps1
+├── directory_scan_20250627_094256.json
+├── README.md
+

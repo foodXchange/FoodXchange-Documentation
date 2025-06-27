@@ -1,0 +1,2112 @@
+{
+  "DirectoryStructure": [
+    {
+      "Type": "Directory",
+      "Path": ".github",
+      "Name": ".github"
+    },
+    {
+      "Type": "Directory",
+      "Path": ".github\\workflows",
+      "Name": "workflows"
+    },
+    {
+      "Type": "Directory",
+      "Path": "01-Progress",
+      "Name": "01-Progress"
+    },
+    {
+      "Type": "Directory",
+      "Path": "01-Progress\\Chat-Sessions",
+      "Name": "Chat-Sessions"
+    },
+    {
+      "Type": "Directory",
+      "Path": "01-Progress\\Daily-Logs",
+      "Name": "Daily-Logs"
+    },
+    {
+      "Type": "Directory",
+      "Path": "01-Progress\\Milestones",
+      "Name": "Milestones"
+    },
+    {
+      "Type": "Directory",
+      "Path": "01-Progress\\Templates",
+      "Name": "Templates"
+    },
+    {
+      "Type": "Directory",
+      "Path": "01-Progress\\Weekly-Summaries",
+      "Name": "Weekly-Summaries"
+    },
+    {
+      "Type": "Directory",
+      "Path": "02-Architecture",
+      "Name": "02-Architecture"
+    },
+    {
+      "Type": "Directory",
+      "Path": "02-Architecture\\API-Specs",
+      "Name": "API-Specs"
+    },
+    {
+      "Type": "Directory",
+      "Path": "02-Architecture\\Decisions",
+      "Name": "Decisions"
+    },
+    {
+      "Type": "Directory",
+      "Path": "02-Architecture\\Diagrams",
+      "Name": "Diagrams"
+    },
+    {
+      "Type": "Directory",
+      "Path": "02-Architecture\\Templates",
+      "Name": "Templates"
+    },
+    {
+      "Type": "Directory",
+      "Path": "03-Scripts",
+      "Name": "03-Scripts"
+    },
+    {
+      "Type": "Directory",
+      "Path": "03-Scripts\\Deployment",
+      "Name": "Deployment"
+    },
+    {
+      "Type": "Directory",
+      "Path": "03-Scripts\\PowerShell",
+      "Name": "PowerShell"
+    },
+    {
+      "Type": "Directory",
+      "Path": "03-Scripts\\Testing",
+      "Name": "Testing"
+    },
+    {
+      "Type": "Directory",
+      "Path": "03-Scripts\\Utilities",
+      "Name": "Utilities"
+    },
+    {
+      "Type": "Directory",
+      "Path": "04-Development",
+      "Name": "04-Development"
+    },
+    {
+      "Type": "Directory",
+      "Path": "04-Development\\Best-Practices",
+      "Name": "Best-Practices"
+    },
+    {
+      "Type": "Directory",
+      "Path": "04-Development\\Code-Standards",
+      "Name": "Code-Standards"
+    },
+    {
+      "Type": "Directory",
+      "Path": "04-Development\\Guides",
+      "Name": "Guides"
+    },
+    {
+      "Type": "Directory",
+      "Path": "04-Development\\Setup-Guides",
+      "Name": "Setup-Guides"
+    },
+    {
+      "Type": "Directory",
+      "Path": "06-Planning",
+      "Name": "06-Planning"
+    },
+    {
+      "Type": "Directory",
+      "Path": "06-Planning\\Meeting-Notes",
+      "Name": "Meeting-Notes"
+    },
+    {
+      "Type": "Directory",
+      "Path": "06-Planning\\Roadmaps",
+      "Name": "Roadmaps"
+    },
+    {
+      "Type": "Directory",
+      "Path": "06-Planning\\User-Stories",
+      "Name": "User-Stories"
+    },
+    {
+      "Type": "Directory",
+      "Path": "07-Resources",
+      "Name": "07-Resources"
+    },
+    {
+      "Type": "Directory",
+      "Path": "07-Resources\\External-Docs",
+      "Name": "External-Docs"
+    },
+    {
+      "Type": "Directory",
+      "Path": "07-Resources\\Research",
+      "Name": "Research"
+    },
+    {
+      "Type": "Directory",
+      "Path": "07-Resources\\Tutorials",
+      "Name": "Tutorials"
+    }
+  ],
+  "RootPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs",
+  "Summary": {
+    "TotalSizeKB": 13996.15,
+    "TotalDirectories": 177,
+    "TotalFiles": 241
+  },
+  "ScanDate": "2025-06-27 09:42:54",
+  "FileDetails": [
+    {
+      "Name": ".gitattributes",
+      "SizeKB": 0.56,
+      "Extension": ".gitattributes",
+      "LastModified": "2025-06-27T09:13:04.3941821+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.gitattributes",
+      "RelativePath": ".gitattributes"
+    },
+    {
+      "Name": ".gitignore",
+      "SizeKB": 0.5,
+      "Extension": ".gitignore",
+      "LastModified": "2025-06-27T09:13:04.3961642+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.gitignore",
+      "ContentPreview": "# Dependencies\nnode_modules/\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*",
+      "RelativePath": ".gitignore"
+    },
+    {
+      "Name": "create-all-docs.ps1",
+      "SizeKB": 24.56,
+      "Extension": ".ps1",
+      "LastModified": "2025-06-27T08:22:24.1706962+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\create-all-docs.ps1",
+      "RelativePath": "create-all-docs.ps1"
+    },
+    {
+      "Name": "Create-Backup.ps1",
+      "SizeKB": 1.29,
+      "Extension": ".ps1",
+      "LastModified": "2025-06-27T09:14:14.4203049+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\Create-Backup.ps1",
+      "RelativePath": "Create-Backup.ps1"
+    },
+    {
+      "Name": "README.md",
+      "SizeKB": 0.92,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:13:16.107624+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\README.md",
+      "ContentPreview": "# FoodXchange Documentation Hub\n\nWelcome to the FoodXchange B2B Platform documentation repository.\n\n## 📁 Structure Overview",
+      "RelativePath": "README.md"
+    },
+    {
+      "Name": "COMMIT_EDITMSG",
+      "SizeKB": 0.04,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.6370551+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\COMMIT_EDITMSG",
+      "RelativePath": ".git\\COMMIT_EDITMSG"
+    },
+    {
+      "Name": "config",
+      "SizeKB": 0.16,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:13:04.3881866+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\config",
+      "RelativePath": ".git\\config"
+    },
+    {
+      "Name": "description",
+      "SizeKB": 0.07,
+      "Extension": "",
+      "LastModified": "2025-06-27T08:13:16.2317631+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\description",
+      "RelativePath": ".git\\description"
+    },
+    {
+      "Name": "HEAD",
+      "SizeKB": 0.02,
+      "Extension": "",
+      "LastModified": "2025-06-27T08:13:16.259265+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\HEAD",
+      "RelativePath": ".git\\HEAD"
+    },
+    {
+      "Name": "index",
+      "SizeKB": 2.21,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.3733226+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\index",
+      "RelativePath": ".git\\index"
+    },
+    {
+      "Name": "ORIG_HEAD",
+      "SizeKB": 0.04,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.1093041+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\ORIG_HEAD",
+      "RelativePath": ".git\\ORIG_HEAD"
+    },
+    {
+      "Name": "applypatch-msg.sample",
+      "SizeKB": 0.47,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2327609+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\applypatch-msg.sample",
+      "RelativePath": ".git\\hooks\\applypatch-msg.sample"
+    },
+    {
+      "Name": "commit-msg.sample",
+      "SizeKB": 0.88,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2347637+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\commit-msg.sample",
+      "RelativePath": ".git\\hooks\\commit-msg.sample"
+    },
+    {
+      "Name": "fsmonitor-watchman.sample",
+      "SizeKB": 4.62,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2347637+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\fsmonitor-watchman.sample",
+      "RelativePath": ".git\\hooks\\fsmonitor-watchman.sample"
+    },
+    {
+      "Name": "post-update.sample",
+      "SizeKB": 0.18,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2357588+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\post-update.sample",
+      "RelativePath": ".git\\hooks\\post-update.sample"
+    },
+    {
+      "Name": "pre-applypatch.sample",
+      "SizeKB": 0.41,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2367588+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\pre-applypatch.sample",
+      "RelativePath": ".git\\hooks\\pre-applypatch.sample"
+    },
+    {
+      "Name": "pre-commit.sample",
+      "SizeKB": 1.61,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2377592+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\pre-commit.sample",
+      "RelativePath": ".git\\hooks\\pre-commit.sample"
+    },
+    {
+      "Name": "pre-merge-commit.sample",
+      "SizeKB": 0.41,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2377592+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\pre-merge-commit.sample",
+      "RelativePath": ".git\\hooks\\pre-merge-commit.sample"
+    },
+    {
+      "Name": "pre-push.sample",
+      "SizeKB": 1.34,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.239252+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\pre-push.sample",
+      "RelativePath": ".git\\hooks\\pre-push.sample"
+    },
+    {
+      "Name": "pre-rebase.sample",
+      "SizeKB": 4.78,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2402586+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\pre-rebase.sample",
+      "RelativePath": ".git\\hooks\\pre-rebase.sample"
+    },
+    {
+      "Name": "pre-receive.sample",
+      "SizeKB": 0.53,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2412683+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\pre-receive.sample",
+      "RelativePath": ".git\\hooks\\pre-receive.sample"
+    },
+    {
+      "Name": "prepare-commit-msg.sample",
+      "SizeKB": 1.46,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2412683+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\prepare-commit-msg.sample",
+      "RelativePath": ".git\\hooks\\prepare-commit-msg.sample"
+    },
+    {
+      "Name": "push-to-checkout.sample",
+      "SizeKB": 2.72,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2422592+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\push-to-checkout.sample",
+      "RelativePath": ".git\\hooks\\push-to-checkout.sample"
+    },
+    {
+      "Name": "sendemail-validate.sample",
+      "SizeKB": 2.25,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2432578+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\sendemail-validate.sample",
+      "RelativePath": ".git\\hooks\\sendemail-validate.sample"
+    },
+    {
+      "Name": "update.sample",
+      "SizeKB": 3.56,
+      "Extension": ".sample",
+      "LastModified": "2025-06-27T08:13:16.2442595+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\hooks\\update.sample",
+      "RelativePath": ".git\\hooks\\update.sample"
+    },
+    {
+      "Name": "exclude",
+      "SizeKB": 0.23,
+      "Extension": "",
+      "LastModified": "2025-06-27T08:13:16.2452592+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\info\\exclude",
+      "RelativePath": ".git\\info\\exclude"
+    },
+    {
+      "Name": "HEAD",
+      "SizeKB": 0.36,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.1103042+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\logs\\HEAD",
+      "RelativePath": ".git\\logs\\HEAD"
+    },
+    {
+      "Name": "master",
+      "SizeKB": 0.19,
+      "Extension": "",
+      "LastModified": "2025-06-27T08:13:16.4015779+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\logs\\refs\\heads\\master",
+      "RelativePath": ".git\\logs\\refs\\heads\\master"
+    },
+    {
+      "Name": "a9fdc41404defda56973b78b1487f19b7d8c1c",
+      "SizeKB": 0.24,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.1463196+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\01\\a9fdc41404defda56973b78b1487f19b7d8c1c",
+      "RelativePath": ".git\\objects\\01\\a9fdc41404defda56973b78b1487f19b7d8c1c"
+    },
+    {
+      "Name": "d72394891da4e572de4c4cd72df57d4bac8566",
+      "SizeKB": 1.09,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.180365+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\02\\d72394891da4e572de4c4cd72df57d4bac8566",
+      "RelativePath": ".git\\objects\\02\\d72394891da4e572de4c4cd72df57d4bac8566"
+    },
+    {
+      "Name": "ff2adcbac570ea6045332980c34ab32b3e18f1",
+      "SizeKB": 0.59,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1853615+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\02\\ff2adcbac570ea6045332980c34ab32b3e18f1",
+      "RelativePath": ".git\\objects\\02\\ff2adcbac570ea6045332980c34ab32b3e18f1"
+    },
+    {
+      "Name": "71d4b1fad74042f968095c40218c0d01b2cd66",
+      "SizeKB": 0.67,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2183612+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\03\\71d4b1fad74042f968095c40218c0d01b2cd66",
+      "RelativePath": ".git\\objects\\03\\71d4b1fad74042f968095c40218c0d01b2cd66"
+    },
+    {
+      "Name": "8a22a707677bac3bec926fb4c9e590e5f84cbd",
+      "SizeKB": 1.69,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2733773+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\04\\8a22a707677bac3bec926fb4c9e590e5f84cbd",
+      "RelativePath": ".git\\objects\\04\\8a22a707677bac3bec926fb4c9e590e5f84cbd"
+    },
+    {
+      "Name": "6ccac720b65e1ba067e7eda0a4b1da4d3ba24a",
+      "SizeKB": 0.99,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2523785+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\06\\6ccac720b65e1ba067e7eda0a4b1da4d3ba24a",
+      "RelativePath": ".git\\objects\\06\\6ccac720b65e1ba067e7eda0a4b1da4d3ba24a"
+    },
+    {
+      "Name": "ce2e4a10682480a7085ffde87d187548e42462",
+      "SizeKB": 0.34,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.5746928+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\06\\ce2e4a10682480a7085ffde87d187548e42462",
+      "RelativePath": ".git\\objects\\06\\ce2e4a10682480a7085ffde87d187548e42462"
+    },
+    {
+      "Name": "842d1ff522fcbfd40bf5b38beb5a4281e51474",
+      "SizeKB": 0.29,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2003622+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\07\\842d1ff522fcbfd40bf5b38beb5a4281e51474",
+      "RelativePath": ".git\\objects\\07\\842d1ff522fcbfd40bf5b38beb5a4281e51474"
+    },
+    {
+      "Name": "8cb001282444144d326194bdf5c09fd071ffcb",
+      "SizeKB": 0.52,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2893615+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\08\\8cb001282444144d326194bdf5c09fd071ffcb",
+      "RelativePath": ".git\\objects\\08\\8cb001282444144d326194bdf5c09fd071ffcb"
+    },
+    {
+      "Name": "27ebabb7046b6094120a02712276a7e584f5da",
+      "SizeKB": 0.51,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2173617+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\09\\27ebabb7046b6094120a02712276a7e584f5da",
+      "RelativePath": ".git\\objects\\09\\27ebabb7046b6094120a02712276a7e584f5da"
+    },
+    {
+      "Name": "21cda10f84286d92028c0925a457b3e3ef8779",
+      "SizeKB": 50.32,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3924691+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\0b\\21cda10f84286d92028c0925a457b3e3ef8779",
+      "RelativePath": ".git\\objects\\0b\\21cda10f84286d92028c0925a457b3e3ef8779"
+    },
+    {
+      "Name": "d33e6bbc228d6513e23b4bc2dcadf0dd388fbc",
+      "SizeKB": 0.84,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1973618+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\0c\\d33e6bbc228d6513e23b4bc2dcadf0dd388fbc",
+      "RelativePath": ".git\\objects\\0c\\d33e6bbc228d6513e23b4bc2dcadf0dd388fbc"
+    },
+    {
+      "Name": "6f6d465a7820eea3bb2dea3b21ce30e270451d",
+      "SizeKB": 0.77,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3194841+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\0e\\6f6d465a7820eea3bb2dea3b21ce30e270451d",
+      "RelativePath": ".git\\objects\\0e\\6f6d465a7820eea3bb2dea3b21ce30e270451d"
+    },
+    {
+      "Name": "1fb96bb864e8d8a07bb291cadb6d1f71c4de4b",
+      "SizeKB": 2.79,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3074726+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\13\\1fb96bb864e8d8a07bb291cadb6d1f71c4de4b",
+      "RelativePath": ".git\\objects\\13\\1fb96bb864e8d8a07bb291cadb6d1f71c4de4b"
+    },
+    {
+      "Name": "fbd24bc80f36fb864386eb4a6590af9cd155b7",
+      "SizeKB": 0.67,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1552027+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\15\\fbd24bc80f36fb864386eb4a6590af9cd155b7",
+      "RelativePath": ".git\\objects\\15\\fbd24bc80f36fb864386eb4a6590af9cd155b7"
+    },
+    {
+      "Name": "989bbab3e744e348c06f631fcf03faca2524fd",
+      "SizeKB": 0.51,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.1473207+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\16\\989bbab3e744e348c06f631fcf03faca2524fd",
+      "RelativePath": ".git\\objects\\16\\989bbab3e744e348c06f631fcf03faca2524fd"
+    },
+    {
+      "Name": "a7971123957c70d6102a96d8a3d143504189de",
+      "SizeKB": 0.71,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2413618+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\16\\a7971123957c70d6102a96d8a3d143504189de",
+      "RelativePath": ".git\\objects\\16\\a7971123957c70d6102a96d8a3d143504189de"
+    },
+    {
+      "Name": "dbf901a4bed58de68cc9c4d34ed4bc59a4e2f2",
+      "SizeKB": 1.17,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2463672+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\16\\dbf901a4bed58de68cc9c4d34ed4bc59a4e2f2",
+      "RelativePath": ".git\\objects\\16\\dbf901a4bed58de68cc9c4d34ed4bc59a4e2f2"
+    },
+    {
+      "Name": "1d5dc379d64bb519c60697e63612d19b582bdb",
+      "SizeKB": 0.74,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1562003+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\18\\1d5dc379d64bb519c60697e63612d19b582bdb",
+      "RelativePath": ".git\\objects\\18\\1d5dc379d64bb519c60697e63612d19b582bdb"
+    },
+    {
+      "Name": "360cf21d89e981fc1c93bdb8f66a601cf57246",
+      "SizeKB": 0.7,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:30.0516363+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\18\\360cf21d89e981fc1c93bdb8f66a601cf57246",
+      "RelativePath": ".git\\objects\\18\\360cf21d89e981fc1c93bdb8f66a601cf57246"
+    },
+    {
+      "Name": "76a35d0e2f6b200e62cc8473a5110a7e8a9aa9",
+      "SizeKB": 1.21,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2313655+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\19\\76a35d0e2f6b200e62cc8473a5110a7e8a9aa9",
+      "RelativePath": ".git\\objects\\19\\76a35d0e2f6b200e62cc8473a5110a7e8a9aa9"
+    },
+    {
+      "Name": "d6091a65ba3f88863595bb6dd793722619202c",
+      "SizeKB": 0.83,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.301463+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\19\\d6091a65ba3f88863595bb6dd793722619202c",
+      "RelativePath": ".git\\objects\\19\\d6091a65ba3f88863595bb6dd793722619202c"
+    },
+    {
+      "Name": "26f13282b1038e2af967f8783518610d482d49",
+      "SizeKB": 0.19,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1773612+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\1a\\26f13282b1038e2af967f8783518610d482d49",
+      "RelativePath": ".git\\objects\\1a\\26f13282b1038e2af967f8783518610d482d49"
+    },
+    {
+      "Name": "73b6cf2d0971ebc3e75f5aa6fd8f785fe133ec",
+      "SizeKB": 1.96,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2503635+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\1b\\73b6cf2d0971ebc3e75f5aa6fd8f785fe133ec",
+      "RelativePath": ".git\\objects\\1b\\73b6cf2d0971ebc3e75f5aa6fd8f785fe133ec"
+    },
+    {
+      "Name": "d3329ae713f7c2bd28ee6837ae30a8d325b9d5",
+      "SizeKB": 0.67,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.4484898+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\1d\\d3329ae713f7c2bd28ee6837ae30a8d325b9d5",
+      "RelativePath": ".git\\objects\\1d\\d3329ae713f7c2bd28ee6837ae30a8d325b9d5"
+    },
+    {
+      "Name": "2de60ac0a62b7b4dbf4172da601557f9bc3f85",
+      "SizeKB": 1.28,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2303625+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\1e\\2de60ac0a62b7b4dbf4172da601557f9bc3f85",
+      "RelativePath": ".git\\objects\\1e\\2de60ac0a62b7b4dbf4172da601557f9bc3f85"
+    },
+    {
+      "Name": "8c57a53574007ba3ea464beac66d1890715768",
+      "SizeKB": 2.47,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.2323058+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\1e\\8c57a53574007ba3ea464beac66d1890715768",
+      "RelativePath": ".git\\objects\\1e\\8c57a53574007ba3ea464beac66d1890715768"
+    },
+    {
+      "Name": "914324f8cee90df201c658e488d3ddeac2ca39",
+      "SizeKB": 0.5,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1953615+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\1e\\914324f8cee90df201c658e488d3ddeac2ca39",
+      "RelativePath": ".git\\objects\\1e\\914324f8cee90df201c658e488d3ddeac2ca39"
+    },
+    {
+      "Name": "fca6d882f6950a8d84608194df5d993191314c",
+      "SizeKB": 4.81,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1863617+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\1f\\fca6d882f6950a8d84608194df5d993191314c",
+      "RelativePath": ".git\\objects\\1f\\fca6d882f6950a8d84608194df5d993191314c"
+    },
+    {
+      "Name": "35ca77683b7f898b0b66412f195d0e4b495e12",
+      "SizeKB": 0.32,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1633666+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\21\\35ca77683b7f898b0b66412f195d0e4b495e12",
+      "RelativePath": ".git\\objects\\21\\35ca77683b7f898b0b66412f195d0e4b495e12"
+    },
+    {
+      "Name": "af00eed1befff8ce2e865c8e4b7a6410afa25f",
+      "SizeKB": 0.79,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2103634+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\22\\af00eed1befff8ce2e865c8e4b7a6410afa25f",
+      "RelativePath": ".git\\objects\\22\\af00eed1befff8ce2e865c8e4b7a6410afa25f"
+    },
+    {
+      "Name": "e779967ce3215fd480738148e1ab6b5b989bb1",
+      "SizeKB": 1.12,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3114729+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\23\\e779967ce3215fd480738148e1ab6b5b989bb1",
+      "RelativePath": ".git\\objects\\23\\e779967ce3215fd480738148e1ab6b5b989bb1"
+    },
+    {
+      "Name": "1c4f7cc5cff9432207973b71d129d0c51f6744",
+      "SizeKB": 4.08,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.248362+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\24\\1c4f7cc5cff9432207973b71d129d0c51f6744",
+      "RelativePath": ".git\\objects\\24\\1c4f7cc5cff9432207973b71d129d0c51f6744"
+    },
+    {
+      "Name": "be0d0f8db185801e5be495c3d0225dbfc9982c",
+      "SizeKB": 0.32,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2203619+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\24\\be0d0f8db185801e5be495c3d0225dbfc9982c",
+      "RelativePath": ".git\\objects\\24\\be0d0f8db185801e5be495c3d0225dbfc9982c"
+    },
+    {
+      "Name": "31ab0bc4bd0a7e3076bb2777fcd3612afe5830",
+      "SizeKB": 0.22,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2813644+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\25\\31ab0bc4bd0a7e3076bb2777fcd3612afe5830",
+      "RelativePath": ".git\\objects\\25\\31ab0bc4bd0a7e3076bb2777fcd3612afe5830"
+    },
+    {
+      "Name": "55f7b3802a2e0c2557f28422e7a447b64f7782",
+      "SizeKB": 0.56,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1883633+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\27\\55f7b3802a2e0c2557f28422e7a447b64f7782",
+      "RelativePath": ".git\\objects\\27\\55f7b3802a2e0c2557f28422e7a447b64f7782"
+    },
+    {
+      "Name": "159163aaec1167f0948e2aee638a53c9af4e79",
+      "SizeKB": 1.18,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3084697+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\29\\159163aaec1167f0948e2aee638a53c9af4e79",
+      "RelativePath": ".git\\objects\\29\\159163aaec1167f0948e2aee638a53c9af4e79"
+    },
+    {
+      "Name": "c32277fdfddf8354fcf18fcf86b9621aac903a",
+      "SizeKB": 0.95,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:30.0586358+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\2c\\c32277fdfddf8354fcf18fcf86b9621aac903a",
+      "RelativePath": ".git\\objects\\2c\\c32277fdfddf8354fcf18fcf86b9621aac903a"
+    },
+    {
+      "Name": "e91600f43621cdbcb53b5af213b1569141a692",
+      "SizeKB": 0.19,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2663655+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\2c\\e91600f43621cdbcb53b5af213b1569141a692",
+      "RelativePath": ".git\\objects\\2c\\e91600f43621cdbcb53b5af213b1569141a692"
+    },
+    {
+      "Name": "a1ca0201897a19b9d1c960500f4927dd582975",
+      "SizeKB": 0.54,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1983643+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\2f\\a1ca0201897a19b9d1c960500f4927dd582975",
+      "RelativePath": ".git\\objects\\2f\\a1ca0201897a19b9d1c960500f4927dd582975"
+    },
+    {
+      "Name": "21e26dd85f44f24c617a34f8abd62328351d88",
+      "SizeKB": 0.42,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2013617+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\31\\21e26dd85f44f24c617a34f8abd62328351d88",
+      "RelativePath": ".git\\objects\\31\\21e26dd85f44f24c617a34f8abd62328351d88"
+    },
+    {
+      "Name": "96cca8b1a3598ac16dd029182798815a0b9d8e",
+      "SizeKB": 1.89,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3064748+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\31\\96cca8b1a3598ac16dd029182798815a0b9d8e",
+      "RelativePath": ".git\\objects\\31\\96cca8b1a3598ac16dd029182798815a0b9d8e"
+    },
+    {
+      "Name": "18b3c5afdf670f5c0e31fd08d454e537baf4c0",
+      "SizeKB": 0.36,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1943682+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\32\\18b3c5afdf670f5c0e31fd08d454e537baf4c0",
+      "RelativePath": ".git\\objects\\32\\18b3c5afdf670f5c0e31fd08d454e537baf4c0"
+    },
+    {
+      "Name": "54b94bf7c606359bdf68685e91f1e63472033c",
+      "SizeKB": 0.25,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3154695+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\32\\54b94bf7c606359bdf68685e91f1e63472033c",
+      "RelativePath": ".git\\objects\\32\\54b94bf7c606359bdf68685e91f1e63472033c"
+    },
+    {
+      "Name": "622f2f4db2424f7f6103c2388799e292d33174",
+      "SizeKB": 1.19,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3234706+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\34\\622f2f4db2424f7f6103c2388799e292d33174",
+      "RelativePath": ".git\\objects\\34\\622f2f4db2424f7f6103c2388799e292d33174"
+    },
+    {
+      "Name": "f5f3ad9a1ed42ad61ad17b5bb47b26b3e187d0",
+      "SizeKB": 0.19,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1613695+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\37\\f5f3ad9a1ed42ad61ad17b5bb47b26b3e187d0",
+      "RelativePath": ".git\\objects\\37\\f5f3ad9a1ed42ad61ad17b5bb47b26b3e187d0"
+    },
+    {
+      "Name": "7241c2b48b83ae2e96eeb5470d05ec1e649810",
+      "SizeKB": 49.46,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.4374787+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\39\\7241c2b48b83ae2e96eeb5470d05ec1e649810",
+      "RelativePath": ".git\\objects\\39\\7241c2b48b83ae2e96eeb5470d05ec1e649810"
+    },
+    {
+      "Name": "ec7dfd0ccb4a3990907a850762c3a1a1fc5464",
+      "SizeKB": 1.11,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2333619+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\39\\ec7dfd0ccb4a3990907a850762c3a1a1fc5464",
+      "RelativePath": ".git\\objects\\39\\ec7dfd0ccb4a3990907a850762c3a1a1fc5464"
+    },
+    {
+      "Name": "1397f70e0e2a80317c19fc829e61d01055e49d",
+      "SizeKB": 0.35,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.1883046+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\3a\\1397f70e0e2a80317c19fc829e61d01055e49d",
+      "RelativePath": ".git\\objects\\3a\\1397f70e0e2a80317c19fc829e61d01055e49d"
+    },
+    {
+      "Name": "08c7f5943690273191e97cc1feeaf257991e65",
+      "SizeKB": 2.36,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3134697+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\3d\\08c7f5943690273191e97cc1feeaf257991e65",
+      "RelativePath": ".git\\objects\\3d\\08c7f5943690273191e97cc1feeaf257991e65"
+    },
+    {
+      "Name": "55bf48a0b37b7214f008968383dacd00c9ad1c",
+      "SizeKB": 0.3,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2393615+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\3d\\55bf48a0b37b7214f008968383dacd00c9ad1c",
+      "RelativePath": ".git\\objects\\3d\\55bf48a0b37b7214f008968383dacd00c9ad1c"
+    },
+    {
+      "Name": "800292879c6b7a73cd7b63834614e15aaeebe5",
+      "SizeKB": 2.69,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1522403+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\3d\\800292879c6b7a73cd7b63834614e15aaeebe5",
+      "RelativePath": ".git\\objects\\3d\\800292879c6b7a73cd7b63834614e15aaeebe5"
+    },
+    {
+      "Name": "f877cbbbd480fa3e72233c00d465c0275beb55",
+      "SizeKB": 0.83,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1893616+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\3d\\f877cbbbd480fa3e72233c00d465c0275beb55",
+      "RelativePath": ".git\\objects\\3d\\f877cbbbd480fa3e72233c00d465c0275beb55"
+    },
+    {
+      "Name": "4e40686adb5e4df495f26bd4095125100bbf30",
+      "SizeKB": 0.5,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2363678+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\3e\\4e40686adb5e4df495f26bd4095125100bbf30",
+      "RelativePath": ".git\\objects\\3e\\4e40686adb5e4df495f26bd4095125100bbf30"
+    },
+    {
+      "Name": "0b832a91cd8035a72ba08251365cd33e492270",
+      "SizeKB": 2.28,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2443634+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\40\\0b832a91cd8035a72ba08251365cd33e492270",
+      "RelativePath": ".git\\objects\\40\\0b832a91cd8035a72ba08251365cd33e492270"
+    },
+    {
+      "Name": "d38ac09335f06d4e09880a383e3a2c70021683",
+      "SizeKB": 2.58,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2973617+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\40\\d38ac09335f06d4e09880a383e3a2c70021683",
+      "RelativePath": ".git\\objects\\40\\d38ac09335f06d4e09880a383e3a2c70021683"
+    },
+    {
+      "Name": "db98a5877c8fc555d8acb45f21ebe47605bc3a",
+      "SizeKB": 0.33,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1591768+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\41\\db98a5877c8fc555d8acb45f21ebe47605bc3a",
+      "RelativePath": ".git\\objects\\41\\db98a5877c8fc555d8acb45f21ebe47605bc3a"
+    },
+    {
+      "Name": "7182d21ad5f59b4182f7e90f9398f17b7dc35e",
+      "SizeKB": 1.35,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2423621+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\43\\7182d21ad5f59b4182f7e90f9398f17b7dc35e",
+      "RelativePath": ".git\\objects\\43\\7182d21ad5f59b4182f7e90f9398f17b7dc35e"
+    },
+    {
+      "Name": "8970c6ae3dcf26e72b21b8b50d8db0f4639bd3",
+      "SizeKB": 1.24,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1933619+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\43\\8970c6ae3dcf26e72b21b8b50d8db0f4639bd3",
+      "RelativePath": ".git\\objects\\43\\8970c6ae3dcf26e72b21b8b50d8db0f4639bd3"
+    },
+    {
+      "Name": "68cca4a7b618a87d9e67b43ca58551db6ffef4",
+      "SizeKB": 0.21,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.5697034+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\44\\68cca4a7b618a87d9e67b43ca58551db6ffef4",
+      "RelativePath": ".git\\objects\\44\\68cca4a7b618a87d9e67b43ca58551db6ffef4"
+    },
+    {
+      "Name": "cbbc6c39a7411da9bb0028a6a3c2b16b16d147",
+      "SizeKB": 12.32,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.5666837+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\47\\cbbc6c39a7411da9bb0028a6a3c2b16b16d147",
+      "RelativePath": ".git\\objects\\47\\cbbc6c39a7411da9bb0028a6a3c2b16b16d147"
+    },
+    {
+      "Name": "d9ca248c3b5e231cbc15558bb7d2f8ac918a55",
+      "SizeKB": 2.39,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3124731+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\47\\d9ca248c3b5e231cbc15558bb7d2f8ac918a55",
+      "RelativePath": ".git\\objects\\47\\d9ca248c3b5e231cbc15558bb7d2f8ac918a55"
+    },
+    {
+      "Name": "2d8185601a58fce5dd38542137233f79fa3d0e",
+      "SizeKB": 0.89,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2113631+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\4c\\2d8185601a58fce5dd38542137233f79fa3d0e",
+      "RelativePath": ".git\\objects\\4c\\2d8185601a58fce5dd38542137233f79fa3d0e"
+    },
+    {
+      "Name": "4f180840c1298f2414c9d5d0aab5db6fb853b4",
+      "SizeKB": 0.99,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2753643+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\4f\\4f180840c1298f2414c9d5d0aab5db6fb853b4",
+      "RelativePath": ".git\\objects\\4f\\4f180840c1298f2414c9d5d0aab5db6fb853b4"
+    },
+    {
+      "Name": "8bd8c14ad2b086ef60318fb0930e9ab06f0e3e",
+      "SizeKB": 0.25,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1623711+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\4f\\8bd8c14ad2b086ef60318fb0930e9ab06f0e3e",
+      "RelativePath": ".git\\objects\\4f\\8bd8c14ad2b086ef60318fb0930e9ab06f0e3e"
+    },
+    {
+      "Name": "c6232fcc0e080811b3c4e30c8bfc61301bd702",
+      "SizeKB": 3.81,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2433618+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\50\\c6232fcc0e080811b3c4e30c8bfc61301bd702",
+      "RelativePath": ".git\\objects\\50\\c6232fcc0e080811b3c4e30c8bfc61301bd702"
+    },
+    {
+      "Name": "fb2194bd001d59cf7104948d6c05ba52d03989",
+      "SizeKB": 0.18,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2833615+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\51\\fb2194bd001d59cf7104948d6c05ba52d03989",
+      "RelativePath": ".git\\objects\\51\\fb2194bd001d59cf7104948d6c05ba52d03989"
+    },
+    {
+      "Name": "a81708b6138cf142214b3faff912feb9ee586c",
+      "SizeKB": 0.74,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:30.0342548+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\54\\a81708b6138cf142214b3faff912feb9ee586c",
+      "RelativePath": ".git\\objects\\54\\a81708b6138cf142214b3faff912feb9ee586c"
+    },
+    {
+      "Name": "02268c205ebeb47630c9332a3347f7eec9966d",
+      "SizeKB": 16.66,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.5716878+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\59\\02268c205ebeb47630c9332a3347f7eec9966d",
+      "RelativePath": ".git\\objects\\59\\02268c205ebeb47630c9332a3347f7eec9966d"
+    },
+    {
+      "Name": "080a4a5b6793ca04dfee274fc28b0aaa596c03",
+      "SizeKB": 0.94,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2423621+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\5a\\080a4a5b6793ca04dfee274fc28b0aaa596c03",
+      "RelativePath": ".git\\objects\\5a\\080a4a5b6793ca04dfee274fc28b0aaa596c03"
+    },
+    {
+      "Name": "0eaccb25fedde36e2485c9cb5d51ed0992c2e9",
+      "SizeKB": 1.05,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.1893225+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\5b\\0eaccb25fedde36e2485c9cb5d51ed0992c2e9",
+      "RelativePath": ".git\\objects\\5b\\0eaccb25fedde36e2485c9cb5d51ed0992c2e9"
+    },
+    {
+      "Name": "8d2419734129fda1eaa5d28e2d83cba04cff8c",
+      "SizeKB": 0.35,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2823643+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\5d\\8d2419734129fda1eaa5d28e2d83cba04cff8c",
+      "RelativePath": ".git\\objects\\5d\\8d2419734129fda1eaa5d28e2d83cba04cff8c"
+    },
+    {
+      "Name": "3266e3657dc9cc9de8f86529ff07b0310d6956",
+      "SizeKB": 14.99,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.4265342+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\5e\\3266e3657dc9cc9de8f86529ff07b0310d6956",
+      "RelativePath": ".git\\objects\\5e\\3266e3657dc9cc9de8f86529ff07b0310d6956"
+    },
+    {
+      "Name": "b0210eeb0e0ef8a6baa5cf93ece3c74d2f6620",
+      "SizeKB": 5.24,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.4574941+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\5e\\b0210eeb0e0ef8a6baa5cf93ece3c74d2f6620",
+      "RelativePath": ".git\\objects\\5e\\b0210eeb0e0ef8a6baa5cf93ece3c74d2f6620"
+    },
+    {
+      "Name": "e8708a8674603bbf975157e8a15b9ed8eb3836",
+      "SizeKB": 6.86,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.5736926+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\5e\\e8708a8674603bbf975157e8a15b9ed8eb3836",
+      "RelativePath": ".git\\objects\\5e\\e8708a8674603bbf975157e8a15b9ed8eb3836"
+    },
+    {
+      "Name": "5374a3b7d8d6c46f4d85e523f9c52ab2bfee45",
+      "SizeKB": 0.72,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.1483201+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\60\\5374a3b7d8d6c46f4d85e523f9c52ab2bfee45",
+      "RelativePath": ".git\\objects\\60\\5374a3b7d8d6c46f4d85e523f9c52ab2bfee45"
+    },
+    {
+      "Name": "7949c00a31ef6ddea40cab245411fd26e3885a",
+      "SizeKB": 0.81,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.154206+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\62\\7949c00a31ef6ddea40cab245411fd26e3885a",
+      "RelativePath": ".git\\objects\\62\\7949c00a31ef6ddea40cab245411fd26e3885a"
+    },
+    {
+      "Name": "8a3e36a1108f6afde3ea782313cfc312599188",
+      "SizeKB": 0.18,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3284696+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\63\\8a3e36a1108f6afde3ea782313cfc312599188",
+      "RelativePath": ".git\\objects\\63\\8a3e36a1108f6afde3ea782313cfc312599188"
+    },
+    {
+      "Name": "ca10a53d4dd1886e8022e5c5386b41456f2aec",
+      "SizeKB": 77.94,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1753606+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\63\\ca10a53d4dd1886e8022e5c5386b41456f2aec",
+      "RelativePath": ".git\\objects\\63\\ca10a53d4dd1886e8022e5c5386b41456f2aec"
+    },
+    {
+      "Name": "d159d029bf441cfac0ba950eeeee419a5fcce2",
+      "SizeKB": 0.15,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1571803+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\64\\d159d029bf441cfac0ba950eeeee419a5fcce2",
+      "RelativePath": ".git\\objects\\64\\d159d029bf441cfac0ba950eeeee419a5fcce2"
+    },
+    {
+      "Name": "d85fe2a4aa58b4335c371e0ff16fcd2014e1f1",
+      "SizeKB": 0.19,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2743685+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\64\\d85fe2a4aa58b4335c371e0ff16fcd2014e1f1",
+      "RelativePath": ".git\\objects\\64\\d85fe2a4aa58b4335c371e0ff16fcd2014e1f1"
+    },
+    {
+      "Name": "e7f0e3d819e49bb06c4e678dc56b3f37349306",
+      "SizeKB": 1.03,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.572677+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\68\\e7f0e3d819e49bb06c4e678dc56b3f37349306",
+      "RelativePath": ".git\\objects\\68\\e7f0e3d819e49bb06c4e678dc56b3f37349306"
+    },
+    {
+      "Name": "718964feed6e63f6e1ba2eb0a0b2ab0c27fa7a",
+      "SizeKB": 15.54,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.4324825+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\6a\\718964feed6e63f6e1ba2eb0a0b2ab0c27fa7a",
+      "RelativePath": ".git\\objects\\6a\\718964feed6e63f6e1ba2eb0a0b2ab0c27fa7a"
+    },
+    {
+      "Name": "a3648cf0a1155fea06c10eecc5d32d04eebcd1",
+      "SizeKB": 2.24,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2133629+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\6c\\a3648cf0a1155fea06c10eecc5d32d04eebcd1",
+      "RelativePath": ".git\\objects\\6c\\a3648cf0a1155fea06c10eecc5d32d04eebcd1"
+    },
+    {
+      "Name": "72d77120de02ae6b9c8e5c29664614bc0fa3ca",
+      "SizeKB": 0.94,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.2673542+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\6e\\72d77120de02ae6b9c8e5c29664614bc0fa3ca",
+      "RelativePath": ".git\\objects\\6e\\72d77120de02ae6b9c8e5c29664614bc0fa3ca"
+    },
+    {
+      "Name": "cc60931242328644d656ab6a999f2dc5936928",
+      "SizeKB": 0.68,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.170371+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\6e\\cc60931242328644d656ab6a999f2dc5936928",
+      "RelativePath": ".git\\objects\\6e\\cc60931242328644d656ab6a999f2dc5936928"
+    },
+    {
+      "Name": "89d62c0ea33dfc5c649944ada4463a7ccb9502",
+      "SizeKB": 1.67,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2613641+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\74\\89d62c0ea33dfc5c649944ada4463a7ccb9502",
+      "RelativePath": ".git\\objects\\74\\89d62c0ea33dfc5c649944ada4463a7ccb9502"
+    },
+    {
+      "Name": "21ef4f049680b9f588a049bae17f616e4996db",
+      "SizeKB": 0.69,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.2233046+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\76\\21ef4f049680b9f588a049bae17f616e4996db",
+      "RelativePath": ".git\\objects\\76\\21ef4f049680b9f588a049bae17f616e4996db"
+    },
+    {
+      "Name": "bd359d5aad34127904f0255f3b761f5d878e8c",
+      "SizeKB": 4.46,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2953653+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\76\\bd359d5aad34127904f0255f3b761f5d878e8c",
+      "RelativePath": ".git\\objects\\76\\bd359d5aad34127904f0255f3b761f5d878e8c"
+    },
+    {
+      "Name": "d875c1ff0679c61e7c059374d52c6798d311ef",
+      "SizeKB": 0.33,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3314694+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\76\\d875c1ff0679c61e7c059374d52c6798d311ef",
+      "RelativePath": ".git\\objects\\76\\d875c1ff0679c61e7c059374d52c6798d311ef"
+    },
+    {
+      "Name": "f76b810800596520c7bbb6f3fb67c9cb6be5e4",
+      "SizeKB": 0.92,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.240363+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\76\\f76b810800596520c7bbb6f3fb67c9cb6be5e4",
+      "RelativePath": ".git\\objects\\76\\f76b810800596520c7bbb6f3fb67c9cb6be5e4"
+    },
+    {
+      "Name": "dd0c3d8bb01ce2191b3e8324dc91b8d14d355c",
+      "SizeKB": 0.84,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3894699+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\7b\\dd0c3d8bb01ce2191b3e8324dc91b8d14d355c",
+      "RelativePath": ".git\\objects\\7b\\dd0c3d8bb01ce2191b3e8324dc91b8d14d355c"
+    },
+    {
+      "Name": "98f4124b56664ec3272d1ee8a077a413d39cf6",
+      "SizeKB": 0.39,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2643616+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\81\\98f4124b56664ec3272d1ee8a077a413d39cf6",
+      "RelativePath": ".git\\objects\\81\\98f4124b56664ec3272d1ee8a077a413d39cf6"
+    },
+    {
+      "Name": "bb385bc2ad08cc20938d6995efacd232097662",
+      "SizeKB": 6.06,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3834728+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\83\\bb385bc2ad08cc20938d6995efacd232097662",
+      "RelativePath": ".git\\objects\\83\\bb385bc2ad08cc20938d6995efacd232097662"
+    },
+    {
+      "Name": "52f365f16803d8d0f690a27eafe2f1771ace1e",
+      "SizeKB": 0.9,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1713629+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\87\\52f365f16803d8d0f690a27eafe2f1771ace1e",
+      "RelativePath": ".git\\objects\\87\\52f365f16803d8d0f690a27eafe2f1771ace1e"
+    },
+    {
+      "Name": "70b63f55e72fab89e1d0647b2cd821faaf4842",
+      "SizeKB": 0.15,
+      "Extension": "",
+      "LastModified": "2025-06-27T08:13:16.3956765+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\87\\70b63f55e72fab89e1d0647b2cd821faaf4842",
+      "RelativePath": ".git\\objects\\87\\70b63f55e72fab89e1d0647b2cd821faaf4842"
+    },
+    {
+      "Name": "dd5d602035a7406df56e0b0c8c12c718d62095",
+      "SizeKB": 1.46,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.155306+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\87\\dd5d602035a7406df56e0b0c8c12c718d62095",
+      "RelativePath": ".git\\objects\\87\\dd5d602035a7406df56e0b0c8c12c718d62095"
+    },
+    {
+      "Name": "03d36c22ac4276aa156b7c58920c60d83e03b5",
+      "SizeKB": 0.45,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3374715+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\88\\03d36c22ac4276aa156b7c58920c60d83e03b5",
+      "RelativePath": ".git\\objects\\88\\03d36c22ac4276aa156b7c58920c60d83e03b5"
+    },
+    {
+      "Name": "597fa5f02ad0b9ae34f1f0e33dd7eb13f6ff7d",
+      "SizeKB": 0.43,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1643723+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\8b\\597fa5f02ad0b9ae34f1f0e33dd7eb13f6ff7d",
+      "RelativePath": ".git\\objects\\8b\\597fa5f02ad0b9ae34f1f0e33dd7eb13f6ff7d"
+    },
+    {
+      "Name": "a3b17824c41c6abf1402d231c0477d27ab8371",
+      "SizeKB": 0.95,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.5676451+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\8b\\a3b17824c41c6abf1402d231c0477d27ab8371",
+      "RelativePath": ".git\\objects\\8b\\a3b17824c41c6abf1402d231c0477d27ab8371"
+    },
+    {
+      "Name": "01c288737caaaec27b0bafb58787b3b894fe6d",
+      "SizeKB": 4.48,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1873615+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\8d\\01c288737caaaec27b0bafb58787b3b894fe6d",
+      "RelativePath": ".git\\objects\\8d\\01c288737caaaec27b0bafb58787b3b894fe6d"
+    },
+    {
+      "Name": "325c7e8750f737d928658c8800bd2f48213468",
+      "SizeKB": 6.66,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3964745+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\8e\\325c7e8750f737d928658c8800bd2f48213468",
+      "RelativePath": ".git\\objects\\8e\\325c7e8750f737d928658c8800bd2f48213468"
+    },
+    {
+      "Name": "ad53b72b6d15664f3f1f88799a201129be6dac",
+      "SizeKB": 0.63,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2023625+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\8e\\ad53b72b6d15664f3f1f88799a201129be6dac",
+      "RelativePath": ".git\\objects\\8e\\ad53b72b6d15664f3f1f88799a201129be6dac"
+    },
+    {
+      "Name": "ccdb338278099ab22547a4cf8b889866f6843f",
+      "SizeKB": 0.18,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2793662+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\8e\\ccdb338278099ab22547a4cf8b889866f6843f",
+      "RelativePath": ".git\\objects\\8e\\ccdb338278099ab22547a4cf8b889866f6843f"
+    },
+    {
+      "Name": "b503db2c2f910845eef474c6d78027505efec2",
+      "SizeKB": 10.12,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.0180523+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\8f\\b503db2c2f910845eef474c6d78027505efec2",
+      "RelativePath": ".git\\objects\\8f\\b503db2c2f910845eef474c6d78027505efec2"
+    },
+    {
+      "Name": "26568875fd8e35c922a47d4825e5327edb66bb",
+      "SizeKB": 0.4,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3214694+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\90\\26568875fd8e35c922a47d4825e5327edb66bb",
+      "RelativePath": ".git\\objects\\90\\26568875fd8e35c922a47d4825e5327edb66bb"
+    },
+    {
+      "Name": "669c9bb211e1e65dcd3054a164006f99b6ba59",
+      "SizeKB": 1.08,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2583634+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\92\\669c9bb211e1e65dcd3054a164006f99b6ba59",
+      "RelativePath": ".git\\objects\\92\\669c9bb211e1e65dcd3054a164006f99b6ba59"
+    },
+    {
+      "Name": "c27fae83a9eb899ad01ae74328e63fd8c51022",
+      "SizeKB": 6.58,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.4424791+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\95\\c27fae83a9eb899ad01ae74328e63fd8c51022",
+      "RelativePath": ".git\\objects\\95\\c27fae83a9eb899ad01ae74328e63fd8c51022"
+    },
+    {
+      "Name": "2a3b9a67ff0eb7a22c6b8e57fbb6bb5c531f7f",
+      "SizeKB": 0.64,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3324709+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\96\\2a3b9a67ff0eb7a22c6b8e57fbb6bb5c531f7f",
+      "RelativePath": ".git\\objects\\96\\2a3b9a67ff0eb7a22c6b8e57fbb6bb5c531f7f"
+    },
+    {
+      "Name": "6ff5aadd65c867dc9679c04d2b5a3f04ba6b41",
+      "SizeKB": 0.84,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2273634+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\96\\6ff5aadd65c867dc9679c04d2b5a3f04ba6b41",
+      "RelativePath": ".git\\objects\\96\\6ff5aadd65c867dc9679c04d2b5a3f04ba6b41"
+    },
+    {
+      "Name": "83f71b23deca4de5d5bb81b14b15d2e7ad73fe",
+      "SizeKB": 0.26,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2513639+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\98\\83f71b23deca4de5d5bb81b14b15d2e7ad73fe",
+      "RelativePath": ".git\\objects\\98\\83f71b23deca4de5d5bb81b14b15d2e7ad73fe"
+    },
+    {
+      "Name": "ef35e80fab9d5dd3c0e8fe767437dfcd3e6519",
+      "SizeKB": 1.76,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1581764+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\99\\ef35e80fab9d5dd3c0e8fe767437dfcd3e6519",
+      "RelativePath": ".git\\objects\\99\\ef35e80fab9d5dd3c0e8fe767437dfcd3e6519"
+    },
+    {
+      "Name": "dd745d21cafaaa365c048e3f8585deb8ed8921",
+      "SizeKB": 1.04,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2763621+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\9b\\dd745d21cafaaa365c048e3f8585deb8ed8921",
+      "RelativePath": ".git\\objects\\9b\\dd745d21cafaaa365c048e3f8585deb8ed8921"
+    },
+    {
+      "Name": "6710840450afb890c06f4691bd547ae879a950",
+      "SizeKB": 0.92,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3204702+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\9e\\6710840450afb890c06f4691bd547ae879a950",
+      "RelativePath": ".git\\objects\\9e\\6710840450afb890c06f4691bd547ae879a950"
+    },
+    {
+      "Name": "a308fd3465f390902f910818d1aa94f8c23cc2",
+      "SizeKB": 0.9,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1683619+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\9e\\a308fd3465f390902f910818d1aa94f8c23cc2",
+      "RelativePath": ".git\\objects\\9e\\a308fd3465f390902f910818d1aa94f8c23cc2"
+    },
+    {
+      "Name": "1a511fbc88dfba3a15b017fc4e60bcab165075",
+      "SizeKB": 2.31,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1843619+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\a1\\1a511fbc88dfba3a15b017fc4e60bcab165075",
+      "RelativePath": ".git\\objects\\a1\\1a511fbc88dfba3a15b017fc4e60bcab165075"
+    },
+    {
+      "Name": "24e0c556930de9af4cc0e9a81493407606c57e",
+      "SizeKB": 0.51,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3294819+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\a1\\24e0c556930de9af4cc0e9a81493407606c57e",
+      "RelativePath": ".git\\objects\\a1\\24e0c556930de9af4cc0e9a81493407606c57e"
+    },
+    {
+      "Name": "7e2b3c4e9a8e6fc539a8d69e753c82648c7f56",
+      "SizeKB": 1.04,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3524741+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\a1\\7e2b3c4e9a8e6fc539a8d69e753c82648c7f56",
+      "RelativePath": ".git\\objects\\a1\\7e2b3c4e9a8e6fc539a8d69e753c82648c7f56"
+    },
+    {
+      "Name": "040d5b0ee09cdb9677e13e908d4e1603b496ce",
+      "SizeKB": 0.12,
+      "Extension": "",
+      "LastModified": "2025-06-27T08:13:16.3899246+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\a2\\040d5b0ee09cdb9677e13e908d4e1603b496ce",
+      "RelativePath": ".git\\objects\\a2\\040d5b0ee09cdb9677e13e908d4e1603b496ce"
+    },
+    {
+      "Name": "5b7cfee50b25b1776e7db9a49d3fc04040da91",
+      "SizeKB": 3.72,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2923683+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\a2\\5b7cfee50b25b1776e7db9a49d3fc04040da91",
+      "RelativePath": ".git\\objects\\a2\\5b7cfee50b25b1776e7db9a49d3fc04040da91"
+    },
+    {
+      "Name": "4155518268ed7fee4e830ecd9f245c8b30c13d",
+      "SizeKB": 1.28,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.2693045+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\a3\\4155518268ed7fee4e830ecd9f245c8b30c13d",
+      "RelativePath": ".git\\objects\\a3\\4155518268ed7fee4e830ecd9f245c8b30c13d"
+    },
+    {
+      "Name": "8ea6f8e622b43401e357ec0b1dbcd9c66bb90d",
+      "SizeKB": 1.81,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2073636+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\a6\\8ea6f8e622b43401e357ec0b1dbcd9c66bb90d",
+      "RelativePath": ".git\\objects\\a6\\8ea6f8e622b43401e357ec0b1dbcd9c66bb90d"
+    },
+    {
+      "Name": "0898a237dc504a015624bad87bcbe7b36cbfa6",
+      "SizeKB": 0.53,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:30.0223404+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\a7\\0898a237dc504a015624bad87bcbe7b36cbfa6",
+      "RelativePath": ".git\\objects\\a7\\0898a237dc504a015624bad87bcbe7b36cbfa6"
+    },
+    {
+      "Name": "fd464460178055b049026cee655014b422c51e",
+      "SizeKB": 13265.23,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.5616385+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\aa\\fd464460178055b049026cee655014b422c51e",
+      "RelativePath": ".git\\objects\\aa\\fd464460178055b049026cee655014b422c51e"
+    },
+    {
+      "Name": "ab2b8ba4ffc117a73998e1d38530d800fa7790",
+      "SizeKB": 0.76,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3564775+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ac\\ab2b8ba4ffc117a73998e1d38530d800fa7790",
+      "RelativePath": ".git\\objects\\ac\\ab2b8ba4ffc117a73998e1d38530d800fa7790"
+    },
+    {
+      "Name": "bdee99eee3f1dc9fb5b7240543421339a33a2f",
+      "SizeKB": 0.48,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3394732+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ac\\bdee99eee3f1dc9fb5b7240543421339a33a2f",
+      "RelativePath": ".git\\objects\\ac\\bdee99eee3f1dc9fb5b7240543421339a33a2f"
+    },
+    {
+      "Name": "c13f5dc0e9ecb5e4c5f85f27af09af678a5a09",
+      "SizeKB": 0.18,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2913658+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ac\\c13f5dc0e9ecb5e4c5f85f27af09af678a5a09",
+      "RelativePath": ".git\\objects\\ac\\c13f5dc0e9ecb5e4c5f85f27af09af678a5a09"
+    },
+    {
+      "Name": "d385458b66f78df2db9c7b6edd7ccdf5afcd1c",
+      "SizeKB": 1.02,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2343651+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ad\\d385458b66f78df2db9c7b6edd7ccdf5afcd1c",
+      "RelativePath": ".git\\objects\\ad\\d385458b66f78df2db9c7b6edd7ccdf5afcd1c"
+    },
+    {
+      "Name": "87b3ee34575b5e0c682a4971b955c6718b8d9d",
+      "SizeKB": 4.06,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.4234751+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ae\\87b3ee34575b5e0c682a4971b955c6718b8d9d",
+      "RelativePath": ".git\\objects\\ae\\87b3ee34575b5e0c682a4971b955c6718b8d9d"
+    },
+    {
+      "Name": "deaf8b7a722445e405b5199fa85c01d91d31d7",
+      "SizeKB": 0.3,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2033676+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\b2\\deaf8b7a722445e405b5199fa85c01d91d31d7",
+      "RelativePath": ".git\\objects\\b2\\deaf8b7a722445e405b5199fa85c01d91d31d7"
+    },
+    {
+      "Name": "0b3a6c1fbcb58f43d73401e09047bab6b1d42e",
+      "SizeKB": 0.32,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3304695+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\b4\\0b3a6c1fbcb58f43d73401e09047bab6b1d42e",
+      "RelativePath": ".git\\objects\\b4\\0b3a6c1fbcb58f43d73401e09047bab6b1d42e"
+    },
+    {
+      "Name": "01516fffc4e6bf471f21651069673475d0413f",
+      "SizeKB": 60.89,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.4215152+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\b5\\01516fffc4e6bf471f21651069673475d0413f",
+      "RelativePath": ".git\\objects\\b5\\01516fffc4e6bf471f21651069673475d0413f"
+    },
+    {
+      "Name": "32e8733af9cf39397cd7f36b024287fa244935",
+      "SizeKB": 1.71,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2093678+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\b5\\32e8733af9cf39397cd7f36b024287fa244935",
+      "RelativePath": ".git\\objects\\b5\\32e8733af9cf39397cd7f36b024287fa244935"
+    },
+    {
+      "Name": "679234c11093e7de54ca18e5a64c87618fc15f",
+      "SizeKB": 1.5,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1963616+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\b7\\679234c11093e7de54ca18e5a64c87618fc15f",
+      "RelativePath": ".git\\objects\\b7\\679234c11093e7de54ca18e5a64c87618fc15f"
+    },
+    {
+      "Name": "85f03658803ca54f9a9195219d533b5e607dd7",
+      "SizeKB": 0.32,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.3343214+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\b7\\85f03658803ca54f9a9195219d533b5e607dd7",
+      "RelativePath": ".git\\objects\\b7\\85f03658803ca54f9a9195219d533b5e607dd7"
+    },
+    {
+      "Name": "9ba47b810259fbe77256f6e52b522b260208b7",
+      "SizeKB": 0.18,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2773632+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\b7\\9ba47b810259fbe77256f6e52b522b260208b7",
+      "RelativePath": ".git\\objects\\b7\\9ba47b810259fbe77256f6e52b522b260208b7"
+    },
+    {
+      "Name": "d9c4a503ce0d67b639b86c89e846062d935159",
+      "SizeKB": 1.67,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2083642+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\b8\\d9c4a503ce0d67b639b86c89e846062d935159",
+      "RelativePath": ".git\\objects\\b8\\d9c4a503ce0d67b639b86c89e846062d935159"
+    },
+    {
+      "Name": "b86cb137f20ef0b88cb3835ce7ac37f7d6c615",
+      "SizeKB": 0.53,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1653655+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\bb\\b86cb137f20ef0b88cb3835ce7ac37f7d6c615",
+      "RelativePath": ".git\\objects\\bb\\b86cb137f20ef0b88cb3835ce7ac37f7d6c615"
+    },
+    {
+      "Name": "d4cc3875ecfed79d8cb7466a90be0dea323bb5",
+      "SizeKB": 3.52,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.2223194+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\bc\\d4cc3875ecfed79d8cb7466a90be0dea323bb5",
+      "RelativePath": ".git\\objects\\bc\\d4cc3875ecfed79d8cb7466a90be0dea323bb5"
+    },
+    {
+      "Name": "856be63e4c5cfa14149365f50da359cfd422c1",
+      "SizeKB": 0.26,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.3723197+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\bd\\856be63e4c5cfa14149365f50da359cfd422c1",
+      "RelativePath": ".git\\objects\\bd\\856be63e4c5cfa14149365f50da359cfd422c1"
+    },
+    {
+      "Name": "09a3e2f934f8e03f362c2f5fe0187dfe2b435a",
+      "SizeKB": 0.86,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2883625+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\be\\09a3e2f934f8e03f362c2f5fe0187dfe2b435a",
+      "RelativePath": ".git\\objects\\be\\09a3e2f934f8e03f362c2f5fe0187dfe2b435a"
+    },
+    {
+      "Name": "087e4f17288bc15c4d073e05c08cc7f7ab19d7",
+      "SizeKB": 0.63,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3164704+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\bf\\087e4f17288bc15c4d073e05c08cc7f7ab19d7",
+      "RelativePath": ".git\\objects\\bf\\087e4f17288bc15c4d073e05c08cc7f7ab19d7"
+    },
+    {
+      "Name": "08efb6e47ece9622b2dbdc662f820075a12529",
+      "SizeKB": 2.48,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2323645+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\bf\\08efb6e47ece9622b2dbdc662f820075a12529",
+      "RelativePath": ".git\\objects\\bf\\08efb6e47ece9622b2dbdc662f820075a12529"
+    },
+    {
+      "Name": "a845b1e1d532ad478165cc5a24bf205000ae8c",
+      "SizeKB": 0.48,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1683619+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\c0\\a845b1e1d532ad478165cc5a24bf205000ae8c",
+      "RelativePath": ".git\\objects\\c0\\a845b1e1d532ad478165cc5a24bf205000ae8c"
+    },
+    {
+      "Name": "451fca209c911de57b6391c28d450ad4eab51a",
+      "SizeKB": 0.87,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2193612+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\c4\\451fca209c911de57b6391c28d450ad4eab51a",
+      "RelativePath": ".git\\objects\\c4\\451fca209c911de57b6391c28d450ad4eab51a"
+    },
+    {
+      "Name": "d0ee192eac7b9142b6885672d8ffeda3c4a4c5",
+      "SizeKB": 0.47,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.155306+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\c6\\d0ee192eac7b9142b6885672d8ffeda3c4a4c5",
+      "RelativePath": ".git\\objects\\c6\\d0ee192eac7b9142b6885672d8ffeda3c4a4c5"
+    },
+    {
+      "Name": "346205ea6fe6bcb89efb1d2f50ea6ac6cc6c2b",
+      "SizeKB": 45.25,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.4515404+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\c8\\346205ea6fe6bcb89efb1d2f50ea6ac6cc6c2b",
+      "RelativePath": ".git\\objects\\c8\\346205ea6fe6bcb89efb1d2f50ea6ac6cc6c2b"
+    },
+    {
+      "Name": "74a201a40aee4ec8fd6e5353d9e86d58738bb1",
+      "SizeKB": 0.83,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.4404735+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\c8\\74a201a40aee4ec8fd6e5353d9e86d58738bb1",
+      "RelativePath": ".git\\objects\\c8\\74a201a40aee4ec8fd6e5353d9e86d58738bb1"
+    },
+    {
+      "Name": "38428dc2d98a33fa488edf1cde0976e5df0922",
+      "SizeKB": 8.5,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3874704+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\cb\\38428dc2d98a33fa488edf1cde0976e5df0922",
+      "RelativePath": ".git\\objects\\cb\\38428dc2d98a33fa488edf1cde0976e5df0922"
+    },
+    {
+      "Name": "a4e65e92b0dd95525cde44dee0d102245b65fb",
+      "SizeKB": 21.53,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3854686+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ce\\a4e65e92b0dd95525cde44dee0d102245b65fb",
+      "RelativePath": ".git\\objects\\ce\\a4e65e92b0dd95525cde44dee0d102245b65fb"
+    },
+    {
+      "Name": "cd41142b42987a7e01d3cd561e23acebf0d64f",
+      "SizeKB": 0.3,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2683672+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ce\\cd41142b42987a7e01d3cd561e23acebf0d64f",
+      "RelativePath": ".git\\objects\\ce\\cd41142b42987a7e01d3cd561e23acebf0d64f"
+    },
+    {
+      "Name": "2f846a110e9e7c1e6e256e7ad4244ef59f2b1b",
+      "SizeKB": 0.51,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.2323058+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\cf\\2f846a110e9e7c1e6e256e7ad4244ef59f2b1b",
+      "RelativePath": ".git\\objects\\cf\\2f846a110e9e7c1e6e256e7ad4244ef59f2b1b"
+    },
+    {
+      "Name": "9a5cabcb8f26643612e488e2996fa992615135",
+      "SizeKB": 0.58,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2163625+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\cf\\9a5cabcb8f26643612e488e2996fa992615135",
+      "RelativePath": ".git\\objects\\cf\\9a5cabcb8f26643612e488e2996fa992615135"
+    },
+    {
+      "Name": "0940ff00ae78524caffab1588dd51fb2b57f2c",
+      "SizeKB": 0.34,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3274722+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\d0\\0940ff00ae78524caffab1588dd51fb2b57f2c",
+      "RelativePath": ".git\\objects\\d0\\0940ff00ae78524caffab1588dd51fb2b57f2c"
+    },
+    {
+      "Name": "4cedad5e11644ed1119c994f52af8c325ae9a4",
+      "SizeKB": 8.99,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.3013222+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\d0\\4cedad5e11644ed1119c994f52af8c325ae9a4",
+      "RelativePath": ".git\\objects\\d0\\4cedad5e11644ed1119c994f52af8c325ae9a4"
+    },
+    {
+      "Name": "a858a4487a54e408756d4e9b1da4222c17cee6",
+      "SizeKB": 0.86,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1793625+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\d1\\a858a4487a54e408756d4e9b1da4222c17cee6",
+      "RelativePath": ".git\\objects\\d1\\a858a4487a54e408756d4e9b1da4222c17cee6"
+    },
+    {
+      "Name": "03bd3e6e726efc84c4a1c80a37233f90eabfe0",
+      "SizeKB": 0.93,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2623653+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\d2\\03bd3e6e726efc84c4a1c80a37233f90eabfe0",
+      "RelativePath": ".git\\objects\\d2\\03bd3e6e726efc84c4a1c80a37233f90eabfe0"
+    },
+    {
+      "Name": "4719efe7df6364f2549c8bf41269fd49562b8d",
+      "SizeKB": 0.53,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:30.0566353+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\d5\\4719efe7df6364f2549c8bf41269fd49562b8d",
+      "RelativePath": ".git\\objects\\d5\\4719efe7df6364f2549c8bf41269fd49562b8d"
+    },
+    {
+      "Name": "5e9ba87bc421e9b872c135d366faa01aa65f49",
+      "SizeKB": 0.88,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1693636+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\d5\\5e9ba87bc421e9b872c135d366faa01aa65f49",
+      "RelativePath": ".git\\objects\\d5\\5e9ba87bc421e9b872c135d366faa01aa65f49"
+    },
+    {
+      "Name": "d66d3d6c42cc1a8c625223450f62f41fbc8bcf",
+      "SizeKB": 3.12,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.247367+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\d7\\d66d3d6c42cc1a8c625223450f62f41fbc8bcf",
+      "RelativePath": ".git\\objects\\d7\\d66d3d6c42cc1a8c625223450f62f41fbc8bcf"
+    },
+    {
+      "Name": "862c8fe4208a1171153fef865879933be978c5",
+      "SizeKB": 1.04,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2123824+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\d8\\862c8fe4208a1171153fef865879933be978c5",
+      "RelativePath": ".git\\objects\\d8\\862c8fe4208a1171153fef865879933be978c5"
+    },
+    {
+      "Name": "696ed6e2320cb9b541f65c397e1f15d06b056a",
+      "SizeKB": 1.49,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1813625+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\da\\696ed6e2320cb9b541f65c397e1f15d06b056a",
+      "RelativePath": ".git\\objects\\da\\696ed6e2320cb9b541f65c397e1f15d06b056a"
+    },
+    {
+      "Name": "5f798ffa3d6ecd4e97f8fe79f641808625346f",
+      "SizeKB": 3.26,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2963631+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\db\\5f798ffa3d6ecd4e97f8fe79f641808625346f",
+      "RelativePath": ".git\\objects\\db\\5f798ffa3d6ecd4e97f8fe79f641808625346f"
+    },
+    {
+      "Name": "ae046564418b6f1a25de25a26853446d6c3ab6",
+      "SizeKB": 1.68,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1963616+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\dc\\ae046564418b6f1a25de25a26853446d6c3ab6",
+      "RelativePath": ".git\\objects\\dc\\ae046564418b6f1a25de25a26853446d6c3ab6"
+    },
+    {
+      "Name": "5fde07398cf91265dd4168728f5f2285cb7867",
+      "SizeKB": 0.17,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3254696+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\dd\\5fde07398cf91265dd4168728f5f2285cb7867",
+      "RelativePath": ".git\\objects\\dd\\5fde07398cf91265dd4168728f5f2285cb7867"
+    },
+    {
+      "Name": "ad80444db2720add198ec39dacaffe026e48a5",
+      "SizeKB": 1.02,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2633618+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\dd\\ad80444db2720add198ec39dacaffe026e48a5",
+      "RelativePath": ".git\\objects\\dd\\ad80444db2720add198ec39dacaffe026e48a5"
+    },
+    {
+      "Name": "f27e0c57a32bb7c15148742002b2c8fde26ef4",
+      "SizeKB": 2.19,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2353625+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\dd\\f27e0c57a32bb7c15148742002b2c8fde26ef4",
+      "RelativePath": ".git\\objects\\dd\\f27e0c57a32bb7c15148742002b2c8fde26ef4"
+    },
+    {
+      "Name": "5581f42af5c5e19985b45e9d5309f6ede1f434",
+      "SizeKB": 0.35,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.408539+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\df\\5581f42af5c5e19985b45e9d5309f6ede1f434",
+      "RelativePath": ".git\\objects\\df\\5581f42af5c5e19985b45e9d5309f6ede1f434"
+    },
+    {
+      "Name": "71c3db1136f21036591f6a2806df0844452aa9",
+      "SizeKB": 1.12,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1723639+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\e0\\71c3db1136f21036591f6a2806df0844452aa9",
+      "RelativePath": ".git\\objects\\e0\\71c3db1136f21036591f6a2806df0844452aa9"
+    },
+    {
+      "Name": "88b17a8709a08e7c82bc0bb87a1ea8b2cef5f8",
+      "SizeKB": 1.98,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2153697+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\e1\\88b17a8709a08e7c82bc0bb87a1ea8b2cef5f8",
+      "RelativePath": ".git\\objects\\e1\\88b17a8709a08e7c82bc0bb87a1ea8b2cef5f8"
+    },
+    {
+      "Name": "f57c0a5c8c2bea7a4300e713672150506bb9b5",
+      "SizeKB": 1.39,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2603614+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\e2\\f57c0a5c8c2bea7a4300e713672150506bb9b5",
+      "RelativePath": ".git\\objects\\e2\\f57c0a5c8c2bea7a4300e713672150506bb9b5"
+    },
+    {
+      "Name": "e6b2c875675875062b9e682f630b10ee3bd722",
+      "SizeKB": 0.49,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3144705+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\e3\\e6b2c875675875062b9e682f630b10ee3bd722",
+      "RelativePath": ".git\\objects\\e3\\e6b2c875675875062b9e682f630b10ee3bd722"
+    },
+    {
+      "Name": "c4de1ea6c4e25cf8c0e94e9c81409f56ee0ec6",
+      "SizeKB": 3.3,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.2223194+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\e4\\c4de1ea6c4e25cf8c0e94e9c81409f56ee0ec6",
+      "RelativePath": ".git\\objects\\e4\\c4de1ea6c4e25cf8c0e94e9c81409f56ee0ec6"
+    },
+    {
+      "Name": "d2d414af692093a0c8716cec396ea63aa7a1c1",
+      "SizeKB": 1.31,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:30.0606351+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\e5\\d2d414af692093a0c8716cec396ea63aa7a1c1",
+      "RelativePath": ".git\\objects\\e5\\d2d414af692093a0c8716cec396ea63aa7a1c1"
+    },
+    {
+      "Name": "9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "SizeKB": 0.01,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3494753+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\e6\\9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "RelativePath": ".git\\objects\\e6\\9de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "Name": "6a4946aa2ed09b162e96e184c85dd79623cfba",
+      "SizeKB": 0.92,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2293632+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\e8\\6a4946aa2ed09b162e96e184c85dd79623cfba",
+      "RelativePath": ".git\\objects\\e8\\6a4946aa2ed09b162e96e184c85dd79623cfba"
+    },
+    {
+      "Name": "2f42d9da9d9d8f0382dc75eb93ad488291d64a",
+      "SizeKB": 0.16,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1511845+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ec\\2f42d9da9d9d8f0382dc75eb93ad488291d64a",
+      "RelativePath": ".git\\objects\\ec\\2f42d9da9d9d8f0382dc75eb93ad488291d64a"
+    },
+    {
+      "Name": "7dc63a5d07ccbc0bb5f7d66fad75e28ec0bc46",
+      "SizeKB": 3.73,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2143618+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ec\\7dc63a5d07ccbc0bb5f7d66fad75e28ec0bc46",
+      "RelativePath": ".git\\objects\\ec\\7dc63a5d07ccbc0bb5f7d66fad75e28ec0bc46"
+    },
+    {
+      "Name": "c10e6adcf1b8b100b5a16ef553f28f9785bec2",
+      "SizeKB": 0.84,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1783625+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ec\\c10e6adcf1b8b100b5a16ef553f28f9785bec2",
+      "RelativePath": ".git\\objects\\ec\\c10e6adcf1b8b100b5a16ef553f28f9785bec2"
+    },
+    {
+      "Name": "9f368bff8a76118d59f47e9cabcff7ea3bcce1",
+      "SizeKB": 0.52,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1993615+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ed\\9f368bff8a76118d59f47e9cabcff7ea3bcce1",
+      "RelativePath": ".git\\objects\\ed\\9f368bff8a76118d59f47e9cabcff7ea3bcce1"
+    },
+    {
+      "Name": "d9780f640d82012a3558773d665e0f403b088b",
+      "SizeKB": 0.39,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3264828+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ed\\d9780f640d82012a3558773d665e0f403b088b",
+      "RelativePath": ".git\\objects\\ed\\d9780f640d82012a3558773d665e0f403b088b"
+    },
+    {
+      "Name": "253733150f2505f2759b9cd0a31435102441ff",
+      "SizeKB": 0.4,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3294819+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ef\\253733150f2505f2759b9cd0a31435102441ff",
+      "RelativePath": ".git\\objects\\ef\\253733150f2505f2759b9cd0a31435102441ff"
+    },
+    {
+      "Name": "45d4ebc560463d22b86a314d19a53fe94e2651",
+      "SizeKB": 0.92,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3224702+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ef\\45d4ebc560463d22b86a314d19a53fe94e2651",
+      "RelativePath": ".git\\objects\\ef\\45d4ebc560463d22b86a314d19a53fe94e2651"
+    },
+    {
+      "Name": "3e231fdce419c4461a6607ce6ded411321995f",
+      "SizeKB": 2.02,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3104695+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\f0\\3e231fdce419c4461a6607ce6ded411321995f",
+      "RelativePath": ".git\\objects\\f0\\3e231fdce419c4461a6607ce6ded411321995f"
+    },
+    {
+      "Name": "ab89a8816e1e58655702b4cb4865083c104ca0",
+      "SizeKB": 0.94,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1923617+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\f0\\ab89a8816e1e58655702b4cb4865083c104ca0",
+      "RelativePath": ".git\\objects\\f0\\ab89a8816e1e58655702b4cb4865083c104ca0"
+    },
+    {
+      "Name": "18094a492e6f0b8c4542d4c8623240e50112d7",
+      "SizeKB": 1.06,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:14:14.2703041+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\f3\\18094a492e6f0b8c4542d4c8623240e50112d7",
+      "RelativePath": ".git\\objects\\f3\\18094a492e6f0b8c4542d4c8623240e50112d7"
+    },
+    {
+      "Name": "404c0c09b90990de87123d8394e2ad5f17cf7d",
+      "SizeKB": 1.67,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2043637+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\f3\\404c0c09b90990de87123d8394e2ad5f17cf7d",
+      "RelativePath": ".git\\objects\\f3\\404c0c09b90990de87123d8394e2ad5f17cf7d"
+    },
+    {
+      "Name": "406053f4a810a98fc20ce9d16d2716b406743c",
+      "SizeKB": 0.31,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.1673636+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\f3\\406053f4a810a98fc20ce9d16d2716b406743c",
+      "RelativePath": ".git\\objects\\f3\\406053f4a810a98fc20ce9d16d2716b406743c"
+    },
+    {
+      "Name": "4eb1b7cf9d2fc7dd45ae3e7b8f02f1492374b4",
+      "SizeKB": 0.06,
+      "Extension": "",
+      "LastModified": "2025-06-27T08:13:16.3848907+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\f9\\4eb1b7cf9d2fc7dd45ae3e7b8f02f1492374b4",
+      "RelativePath": ".git\\objects\\f9\\4eb1b7cf9d2fc7dd45ae3e7b8f02f1492374b4"
+    },
+    {
+      "Name": "9fb66d275cd87922cc489c58d7aa710f813780",
+      "SizeKB": 0.13,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.2993678+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\f9\\9fb66d275cd87922cc489c58d7aa710f813780",
+      "RelativePath": ".git\\objects\\f9\\9fb66d275cd87922cc489c58d7aa710f813780"
+    },
+    {
+      "Name": "1e24120194dd24278ee3f812b422dbb2bf101b",
+      "SizeKB": 2.82,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.30547+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\fb\\1e24120194dd24278ee3f812b422dbb2bf101b",
+      "RelativePath": ".git\\objects\\fb\\1e24120194dd24278ee3f812b422dbb2bf101b"
+    },
+    {
+      "Name": "72d9038d2afff48c1cfd5e1f337c68bff4f56d",
+      "SizeKB": 0.1,
+      "Extension": "",
+      "LastModified": "2025-06-27T08:13:16.3874866+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\fd\\72d9038d2afff48c1cfd5e1f337c68bff4f56d",
+      "RelativePath": ".git\\objects\\fd\\72d9038d2afff48c1cfd5e1f337c68bff4f56d"
+    },
+    {
+      "Name": "8a45f6488f74b0d08382d7a1afeb1bbaa892a3",
+      "SizeKB": 4.52,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.4544916+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\fd\\8a45f6488f74b0d08382d7a1afeb1bbaa892a3",
+      "RelativePath": ".git\\objects\\fd\\8a45f6488f74b0d08382d7a1afeb1bbaa892a3"
+    },
+    {
+      "Name": "d2e56e684bf4d7d8e3054e4fa9e9ea56c4fbf6",
+      "SizeKB": 1.9,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3094699+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\fd\\d2e56e684bf4d7d8e3054e4fa9e9ea56c4fbf6",
+      "RelativePath": ".git\\objects\\fd\\d2e56e684bf4d7d8e3054e4fa9e9ea56c4fbf6"
+    },
+    {
+      "Name": "ab8bc8db9803d79e3c5e5eeb775090d7e0df04",
+      "SizeKB": 1.71,
+      "Extension": "",
+      "LastModified": "2025-06-27T09:02:32.3944695+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\objects\\ff\\ab8bc8db9803d79e3c5e5eeb775090d7e0df04",
+      "RelativePath": ".git\\objects\\ff\\ab8bc8db9803d79e3c5e5eeb775090d7e0df04"
+    },
+    {
+      "Name": "master",
+      "SizeKB": 0.04,
+      "Extension": "",
+      "LastModified": "2025-06-27T08:13:16.3991709+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\.git\\refs\\heads\\master",
+      "RelativePath": ".git\\refs\\heads\\master"
+    },
+    {
+      "Name": "current-status.md",
+      "SizeKB": 0.53,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:13:16.1106242+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\01-Progress\\current-status.md",
+      "ContentPreview": "# FoodXchange Progress Tracker\n\n## Current Sprint: Setup & Foundation\n**Start Date**: 2025-06-27\n**Status**: 🟡 In Progress",
+      "RelativePath": "01-Progress\\current-status.md"
+    },
+    {
+      "Name": "project-state-tracker.md",
+      "SizeKB": 2.88,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9599411+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\01-Progress\\project-state-tracker.md",
+      "ContentPreview": "# FoodXchange Project State Tracker\n*Last Updated: 2025-06-27 08:24*\n\n## 🚀 Current Project Status\n",
+      "RelativePath": "01-Progress\\project-state-tracker.md"
+    },
+    {
+      "Name": "2025-06-27-session.md",
+      "SizeKB": 0.66,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:13:16.1116818+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\01-Progress\\Chat-Sessions\\2025-06-27-session.md",
+      "ContentPreview": "# Chat Session - 2025-06-27\n\n## Session Overview\n**Date**: 2025-06-27\n**Time**: 08:13",
+      "RelativePath": "01-Progress\\Chat-Sessions\\2025-06-27-session.md"
+    },
+    {
+      "Name": "daily-log-template.md",
+      "SizeKB": 0.35,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9280076+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\01-Progress\\Templates\\daily-log-template.md",
+      "ContentPreview": "# Daily Log - 2025-06-27\n\n## Goals for Today\n- [ ] Goal 1\n- [ ] Goal 2",
+      "RelativePath": "01-Progress\\Templates\\daily-log-template.md"
+    },
+    {
+      "Name": "milestone-template.md",
+      "SizeKB": 0.9,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9376782+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\01-Progress\\Templates\\milestone-template.md",
+      "ContentPreview": "# Milestone: [Milestone Name]\n\n## Overview\n**Milestone Number**: #001\n**Date Achieved**: 2025-06-27",
+      "RelativePath": "01-Progress\\Templates\\milestone-template.md"
+    },
+    {
+      "Name": "session-template.md",
+      "SizeKB": 1.25,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9310055+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\01-Progress\\Templates\\session-template.md",
+      "ContentPreview": "# AI Chat Session - 2025-06-27 08:24\n\n## Session Info\n- **Date**: 2025-06-27\n- **Time**: 08:24",
+      "RelativePath": "01-Progress\\Templates\\session-template.md"
+    },
+    {
+      "Name": "weekly-summary-template.md",
+      "SizeKB": 0.86,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9341976+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\01-Progress\\Templates\\weekly-summary-template.md",
+      "ContentPreview": "# Weekly Summary - Week 2025-Www\n\n## Week Overview\n**Start Date**: [Monday date]\n**End Date**: [Friday date]",
+      "RelativePath": "01-Progress\\Templates\\weekly-summary-template.md"
+    },
+    {
+      "Name": "overview.md",
+      "SizeKB": 2.71,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9529403+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\02-Architecture\\overview.md",
+      "ContentPreview": "# FoodXchange Architecture Overview\n\n## 🏗️ System Architecture\n\n### High-Level Architecture",
+      "RelativePath": "02-Architecture\\overview.md"
+    },
+    {
+      "Name": "adr-template.md",
+      "SizeKB": 0.67,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9424275+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\02-Architecture\\Templates\\adr-template.md",
+      "ContentPreview": "# ADR-001: [Decision Title]\n\n## Status\n[Proposed | Accepted | Deprecated | Superseded]\n",
+      "RelativePath": "02-Architecture\\Templates\\adr-template.md"
+    },
+    {
+      "Name": "README.md",
+      "SizeKB": 1.49,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9454402+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\03-Scripts\\README.md",
+      "ContentPreview": "# FoodXchange Scripts Directory\n\n## 📁 Structure\n\n\\\\\\",
+      "RelativePath": "03-Scripts\\README.md"
+    },
+    {
+      "Name": "FoodXchange-Diagnostic.ps1",
+      "SizeKB": 14.08,
+      "Extension": ".ps1",
+      "LastModified": "2025-06-27T08:57:45.8628382+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\03-Scripts\\PowerShell\\FoodXchange-Diagnostic.ps1",
+      "RelativePath": "03-Scripts\\PowerShell\\FoodXchange-Diagnostic.ps1"
+    },
+    {
+      "Name": "FoodXchange-Manager.ps1",
+      "SizeKB": 14.79,
+      "Extension": ".ps1",
+      "LastModified": "2025-06-27T09:00:20.0924064+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\03-Scripts\\PowerShell\\FoodXchange-Manager.ps1",
+      "RelativePath": "03-Scripts\\PowerShell\\FoodXchange-Manager.ps1"
+    },
+    {
+      "Name": "backup-project.ps1",
+      "SizeKB": 7.18,
+      "Extension": ".ps1",
+      "LastModified": "2025-06-27T09:01:29.9928093+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\03-Scripts\\Utilities\\backup-project.ps1",
+      "RelativePath": "03-Scripts\\Utilities\\backup-project.ps1"
+    },
+    {
+      "Name": "backup-script-documentation.md",
+      "SizeKB": 1.05,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9639436+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\03-Scripts\\Utilities\\backup-script-documentation.md",
+      "ContentPreview": "# Backup Script Documentation\n\n## Overview\nThe \\\backup-project.ps1\\ script creates versioned backups of your FoodXchange project.\n",
+      "RelativePath": "03-Scripts\\Utilities\\backup-script-documentation.md"
+    },
+    {
+      "Name": "development-standards.md",
+      "SizeKB": 1.87,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9489423+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\04-Development\\Code-Standards\\development-standards.md",
+      "ContentPreview": "# FoodXchange Development Standards\n\n## 🎯 Code Standards\n\n### JavaScript/Node.js",
+      "RelativePath": "04-Development\\Code-Standards\\development-standards.md"
+    },
+    {
+      "Name": "progress-tracking-guide.md",
+      "SizeKB": 2.53,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9240267+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\04-Development\\Guides\\progress-tracking-guide.md",
+      "ContentPreview": "# FoodXchange Progress Tracking Guide\n\n## 🎯 Overview\n\nThis guide explains how to effectively track your FoodXchange project progress and maintain continuity across development sessions.",
+      "RelativePath": "04-Development\\Guides\\progress-tracking-guide.md"
+    },
+    {
+      "Name": "quick-setup-instructions.md",
+      "SizeKB": 2.27,
+      "Extension": ".md",
+      "LastModified": "2025-06-27T08:24:43.9260062+03:00",
+      "FullPath": "C:\\Users\\foodz\\Documents\\GitHub\\Development\\FoodXchange-Docs\\04-Development\\Setup-Guides\\quick-setup-instructions.md",
+      "ContentPreview": "# FoodXchange Documentation - Quick Setup Instructions\n\n## 🚀 Initial Setup (One-Time Only)\n\n### Step 1: Run Documentation Structure Script",
+      "RelativePath": "04-Development\\Setup-Guides\\quick-setup-instructions.md"
+    }
+  ]
+}
