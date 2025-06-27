@@ -1,629 +1,522 @@
-# FoodXchange Enhanced State Management System with AI Context
-# Version: 2.0 - Production Ready
-# Author: FoodXchange Assistant
+# FoodXchange Enhanced State Management System v2.0
+# Comprehensive session tracking with AI context preservation
+# Author: FoodXchange Assistant for Udi Stryk
 # Date: 2025-06-27
 
-# Set execution policy for current session
-Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+param(
+    [string]$Command = "save",
+    [string]$OutputPath = "C:\Users\foodz\Documents\FoodXchange-QuickState",
+    [switch]$Verbose = $true
+)
 
-# Global configuration
+# Change to documentation directory first
+Set-Location "C:\Users\foodz\Documents\GitHub\Development\FoodXchange-Documentation" -ErrorAction SilentlyContinue
+
+Write-Host @"
+
+╔═══════════════════════════════════════════════════════════════╗
+║     FoodXchange Enhanced State Management System v2.0         ║
+║              Comprehensive Session Tracking                   ║
+╚═══════════════════════════════════════════════════════════════╝
+
+"@ -ForegroundColor Cyan
+
+# Configuration
 $global:FoodXConfig = @{
-    DocsPath = "C:\Users\foodz\Documents\GitHub\Development\FoodXchange-Documentation"
-    BackendPath = "C:\Users\foodz\Documents\GitHub\Development\Foodxchange-backend"
     FrontendPath = "C:\Users\foodz\Documents\GitHub\Development\foodxchange-app"
-    QuickStatePath = "C:\Users\foodz\Documents\FoodXchange-QuickState"
-    StateHistoryPath = "C:\Users\foodz\Documents\FoodXchange-QuickState\history"
-    ArtifactsPath = "C:\Users\foodz\Documents\FoodXchange-QuickState\artifacts"
-    SessionsPath = "C:\Users\foodz\Documents\FoodXchange-QuickState\sessions"
+    BackendPath = "C:\Users\foodz\Documents\GitHub\Development\Foodxchange-backend"
+    DocsPath = "C:\Users\foodz\Documents\GitHub\Development\FoodXchange-Documentation"
+    StatePath = $OutputPath
+    Timestamp = Get-Date -Format "yyyy-MM-dd_HHmmss"
+    SessionDate = Get-Date -Format "yyyy-MM-dd HH:mm"
 }
 
-# Initialize directories
-function Initialize-FoodXDirectories {
-    $directories = @(
-        $global:FoodXConfig.QuickStatePath,
-        $global:FoodXConfig.StateHistoryPath,
-        $global:FoodXConfig.ArtifactsPath,
-        $global:FoodXConfig.SessionsPath
-    )
+# Ensure state directory exists
+if (!(Test-Path $global:FoodXConfig.StatePath)) {
+    New-Item -ItemType Directory -Path $global:FoodXConfig.StatePath -Force | Out-Null
+    New-Item -ItemType Directory -Path "$($global:FoodXConfig.StatePath)\sessions" -Force | Out-Null
+    New-Item -ItemType Directory -Path "$($global:FoodXConfig.StatePath)\artifacts" -Force | Out-Null
+}
+
+# Function to get detailed Git information
+function Get-EnhancedGitStatus {
+    param([string]$RepoPath, [string]$RepoName)
     
-    foreach ($dir in $directories) {
-        if (!(Test-Path $dir)) {
-            New-Item -ItemType Directory -Path $dir -Force | Out-Null
+    if (Test-Path "$RepoPath\.git") {
+        Push-Location $RepoPath
+        
+        $status = @{
+            Branch = git branch --show-current 2>$null
+            LastCommit = git log -1 --pretty=format:"%H" 2>$null
+            LastCommitMessage = git log -1 --pretty=format:"%s" 2>$null
+            LastCommitDate = git log -1 --pretty=format:"%ai" 2>$null
+            LastCommitAuthor = git log -1 --pretty=format:"%an" 2>$null
+            UncommittedChanges = @(git status --porcelain 2>$null)
+            CommitHistory = @(git log --oneline -10 2>$null)
+            RemoteUrl = git config --get remote.origin.url 2>$null
+            FileChanges = @{
+                Added = @(git diff --name-only --diff-filter=A 2>$null)
+                Modified = @(git diff --name-only --diff-filter=M 2>$null)
+                Deleted = @(git diff --name-only --diff-filter=D 2>$null)
+            }
+        }
+        
+        Pop-Location
+        return $status
+    }
+    return $null
+}
+
+# Function to analyze project changes
+function Get-ProjectChanges {
+    param([string]$RepoPath, [string]$LastStateFile)
+    
+    $changes = @{
+        NewFiles = @()
+        ModifiedFiles = @()
+        DeletedFiles = @()
+        Summary = ""
+    }
+    
+    if (Test-Path $LastStateFile) {
+        $lastState = Get-Content $LastStateFile -Raw | ConvertFrom-Json -ErrorAction SilentlyContinue
+        if ($lastState -and $lastState.LastCommit) {
+            Push-Location $RepoPath
+            
+            # Get changes since last state
+            $changes.NewFiles = @(git diff --name-only --diff-filter=A "$($lastState.LastCommit)..HEAD" 2>$null)
+            $changes.ModifiedFiles = @(git diff --name-only --diff-filter=M "$($lastState.LastCommit)..HEAD" 2>$null)
+            $changes.DeletedFiles = @(git diff --name-only --diff-filter=D "$($lastState.LastCommit)..HEAD" 2>$null)
+            
+            $totalChanges = $changes.NewFiles.Count + $changes.ModifiedFiles.Count + $changes.DeletedFiles.Count
+            $changes.Summary = "$totalChanges files changed (${($changes.NewFiles.Count)} added, ${($changes.ModifiedFiles.Count)} modified, ${($changes.DeletedFiles.Count)} deleted)"
+            
+            Pop-Location
         }
     }
+    
+    return $changes
 }
 
-# Enhanced Save State Function (fxs)
-function Save-FoodXState {
-    param(
-        [string]$SessionNotes = "",
-        [switch]$DetailedCapture = $true
-    )
-    
-    # Change to docs directory first
-    cd $global:FoodXConfig.DocsPath
-    
-    Write-Host "`n💾 SAVING ENHANCED STATE..." -ForegroundColor Cyan
-    
-    $timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
-    $sessionId = "FXS_$timestamp"
-    
-    # Capture current work context
-    Write-Host "📊 Analyzing repositories..." -ForegroundColor Yellow
+# Function to generate comprehensive state document
+function New-EnhancedStateDocument {
+    Write-Host "`n📝 Generating comprehensive state document..." -ForegroundColor Yellow
     
     # Get Git status for all repos
-    $gitStatus = @{
-        Frontend = Get-GitRepoStatus -Path $global:FoodXConfig.FrontendPath
-        Backend = Get-GitRepoStatus -Path $global:FoodXConfig.BackendPath
-        Docs = Get-GitRepoStatus -Path $global:FoodXConfig.DocsPath
-    }
+    $frontendGit = Get-EnhancedGitStatus -RepoPath $global:FoodXConfig.FrontendPath -RepoName "Frontend"
+    $backendGit = Get-EnhancedGitStatus -RepoPath $global:FoodXConfig.BackendPath -RepoName "Backend"
+    $docsGit = Get-EnhancedGitStatus -RepoPath $global:FoodXConfig.DocsPath -RepoName "Documentation"
     
-    # Capture session artifacts
-    Write-Host "🎨 Capturing session artifacts..." -ForegroundColor Yellow
-    $artifacts = @{
-        Created = @()
-        Modified = @()
-        CodeSnapshots = @()
-    }
+    # Get last state file
+    $lastStateFile = Get-ChildItem "$($global:FoodXConfig.StatePath)\sessions\state_*.json" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
     
-    # Build comprehensive state document
+    # Analyze changes
+    $frontendChanges = if ($lastStateFile) { Get-ProjectChanges -RepoPath $global:FoodXConfig.FrontendPath -LastStateFile $lastStateFile.FullName } else { @{Summary = "First state capture"} }
+    $backendChanges = if ($lastStateFile) { Get-ProjectChanges -RepoPath $global:FoodXConfig.BackendPath -LastStateFile $lastStateFile.FullName } else { @{Summary = "First state capture"} }
+    
     $stateDoc = @"
-# FoodXchange Enhanced State Document
-## Session: $sessionId
-## Generated: $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+# FoodXchange Comprehensive Session State
+**Generated**: $($global:FoodXConfig.SessionDate)
+**Developer**: Udi Stryk (foodz)
+**Session ID**: $($global:FoodXConfig.Timestamp)
 
----
+## 🎯 Project Overview
+- **Name**: FoodXchange B2B Trading Platform (FDX)
+- **Goal**: Achieve 50%+ productivity increase through automation
+- **Stage**: Solo testing MVP development
+- **Architecture**: React + Node.js/Express + MongoDB + Azure AI
 
-## 🚀 PROJECT ROADMAP STATUS
+## 📊 Repository Status
 
-### MVP Target: ASAP (Solo Testing Phase)
-**Goal**: 50%+ productivity increase for food procurement
+### Frontend (foodxchange-app)
+- **Branch**: $($frontendGit.Branch)
+- **Last Commit**: $($frontendGit.LastCommitMessage)
+- **Changes Since Last Session**: $($frontendChanges.Summary)
+- **Uncommitted**: $($frontendGit.UncommittedChanges.Count) files
 
-### 📋 Core Modules Progress:
-1. **RFQ System with AI** [🔄 In Development]
-   - Machine vision for product identification
+### Backend (Foodxchange-backend)
+- **Branch**: $($backendGit.Branch)
+- **Last Commit**: $($backendGit.LastCommitMessage)
+- **Changes Since Last Session**: $($backendChanges.Summary)
+- **Uncommitted**: $($backendGit.UncommittedChanges.Count) files
+
+### Documentation
+- **Branch**: $($docsGit.Branch)
+- **Last Commit**: $($docsGit.LastCommitMessage)
+- **Uncommitted**: $($docsGit.UncommittedChanges.Count) files
+
+## 🏗️ Roadmap & Architecture
+
+### 4-Module System Architecture
+1. **RFQ Module** (Priority 1)
+   - AI/Machine Vision for request creation
    - Buyer request → Seller RFQ conversion
    - Email template system
    - AI agent for supplier matching
-   
-2. **Adaptation Module** [⏳ Planned]
-   - Expert/Contractor marketplace
-   - Multi-market product adaptation
-   - Professional network (designers, regulation, QA, kosher, organic advisors)
-   
-3. **Orders Management** [⏳ Planned]
-   - PO verification system
+   - Multi-supplier comparison
+
+2. **Adaptation Module**
+   - Expert marketplace
+   - Contractor assignment
+   - Market compliance (Kosher, Organic, etc.)
+   - QA advisors integration
+
+3. **Orders Module**
+   - Purchase order management
    - Proforma invoice matching
    - Shipment tracking
-   - Split order handling
-   
-4. **Billing Module** [⏳ Planned]
-   - Commission structure (buyers & sellers)
-   - Contractor payments
-   - Agent revenue sharing
+   - Multi-date deliveries
+
+4. **Billing Module**
+   - Commission tracking
+   - Revenue sharing for agents
+   - Transaction management
+
+## 📝 What Was Accomplished This Session
+[AUTO-FILLED BY SCRIPT - ADD YOUR NOTES HERE]
+
+## 🎨 Artifacts Created This Session
+[AUTO-FILLED BY SCRIPT - LIST ALL ARTIFACTS]
+
+## 🔑 Key Decisions Made
+[AUTO-FILLED BY SCRIPT - IMPORTANT DECISIONS]
+
+## 🚧 Current Implementation Status
+
+### ✅ Completed
+- Basic authentication (JWT)
+- Role-based access (Buyer/Seller/Admin/Contractor/Agent)
+- Company profiles
+- Basic CRUD operations
+
+### 🔄 In Progress
+- RFQ system with AI integration
+- Email template system
+- Supplier matching algorithm
+- Multi-language support
+
+### 📋 TODO Next
+- Azure Cognitive Services setup
+- RFQ data models
+- Email automation
+- AI agent development
+
+## 🐛 Known Issues
+1. Frontend branch appears empty - needs investigation
+2. [Add any current issues]
+
+## 💡 Session Notes & Ideas
+[ADD YOUR THOUGHTS HERE]
+
+## 🔧 Quick Commands
+\`\`\`powershell
+# Save state: fxs
+# New chat: fxn
+# Continue work: fxstart
+# Help: fxhelp
+\`\`\`
+
+## 📈 Productivity Metrics
+- Session Duration: [CALCULATED]
+- Commits Made: [CALCULATED]
+- Files Changed: [CALCULATED]
+
+## 🎯 Continue From
+[SPECIFIC NEXT STEPS]
 
 ---
-
-## 💼 SESSION SUMMARY
-
-### What Was Accomplished:
-$($SessionNotes)
-
-### Artifacts Created This Session:
-$(if ($artifacts.Created.Count -gt 0) {
-    $artifacts.Created | ForEach-Object { "- $_" }
-} else {
-    "- No new artifacts created"
-})
-
-### Code Changes:
-- Frontend: $($gitStatus.Frontend.Changes) changes
-- Backend: $($gitStatus.Backend.Changes) changes  
-- Documentation: $($gitStatus.Docs.Changes) changes
-
-### Key Decisions Made:
-[TO BE FILLED BY DEVELOPER]
-
----
-
-## 🔧 TECHNICAL STATE
-
-### Repository Status:
-#### Frontend (React 18)
-- **Path**: $($global:FoodXConfig.FrontendPath)
-- **Branch**: $($gitStatus.Frontend.Branch)
-- **Last Commit**: $($gitStatus.Frontend.LastCommit)
-- **Uncommitted**: $($gitStatus.Frontend.Changes) files
-
-#### Backend (Node.js/Express)
-- **Path**: $($global:FoodXConfig.BackendPath)
-- **Branch**: $($gitStatus.Backend.Branch)
-- **Last Commit**: $($gitStatus.Backend.LastCommit)
-- **Uncommitted**: $($gitStatus.Backend.Changes) files
-
-#### Documentation
-- **Path**: $($global:FoodXConfig.DocsPath)
-- **Branch**: $($gitStatus.Docs.Branch)
-- **Last Commit**: $($gitStatus.Docs.LastCommit)
-- **Uncommitted**: $($gitStatus.Docs.Changes) files
-
-### Environment Configuration:
-- **MongoDB**: localhost:27017 (foodxchange_db)
-- **Backend API**: http://localhost:5000
-- **Frontend**: http://localhost:3000
-- **Azure Services**: Founder's Hub (No budget limits)
-
----
-
-## 🎯 NEXT CHAT REQUIREMENTS
-
-### Questions for AI Assistant:
-1. What specific RFQ features were implemented?
-2. Which AI/ML components were integrated?
-3. What database schema changes were made?
-4. Which email templates were created?
-5. What expert types were defined in the system?
-
-### Required Context Files:
-- [ ] This state document
-- [ ] Any new component code (especially RFQ-related)
-- [ ] Database schema updates
-- [ ] API endpoint changes
-- [ ] UI/UX mockups or screenshots
-
-### Continue From:
-[SPECIFIC TASK OR FEATURE TO CONTINUE]
-
----
-
-## 📝 DEVELOPER NOTES
-
-$($SessionNotes)
-
----
-
-## 🚀 QUICK CONTINUE COMMANDS
-
-### Start Everything:
-```powershell
-foodx-start
-```
-
-### View This State:
-```powershell
-code "$($global:FoodXConfig.QuickStatePath)\sessions\$sessionId.md"
-```
-
-### Git Sync All:
-```powershell
-foodx-sync
-```
-
----
-
-*Generated by FoodXchange Enhanced State System v2.0*
+*FoodXchange Enhanced State v2.0*
 "@
 
-    # Save state document
-    $stateFile = "$($global:FoodXConfig.SessionsPath)\$sessionId.md"
-    $stateDoc | Out-File -FilePath $stateFile -Encoding UTF8
+    # Save JSON state for comparison
+    $jsonState = @{
+        SessionId = $global:FoodXConfig.Timestamp
+        Timestamp = $global:FoodXConfig.SessionDate
+        Frontend = $frontendGit
+        Backend = $backendGit
+        Documentation = $docsGit
+        Changes = @{
+            Frontend = $frontendChanges
+            Backend = $backendChanges
+        }
+    }
     
-    # Also save as latest
-    $stateDoc | Out-File -FilePath "$($global:FoodXConfig.QuickStatePath)\latest.md" -Encoding UTF8
+    $jsonState | ConvertTo-Json -Depth 10 | Out-File -FilePath "$($global:FoodXConfig.StatePath)\sessions\state_$($global:FoodXConfig.Timestamp).json" -Encoding UTF8
+    
+    return $stateDoc
+}
+
+# Function to generate AI context questionnaire
+function New-AIContextQuestionnaire {
+    $questionnaire = @"
+# FoodXchange AI Context Questionnaire
+*To achieve 98% understanding of previous session*
+
+## 📋 Required Information Checklist
+
+### 1. Session Context
+- [ ] What specific feature/module were you working on?
+- [ ] What was the last code change you made?
+- [ ] Any errors or blockers encountered?
+
+### 2. RFQ Module Status (if applicable)
+- [ ] RFQ data model defined? (Y/N)
+- [ ] Email templates created? (Y/N)
+- [ ] AI integration started? (Y/N)
+- [ ] Machine vision setup? (Y/N)
+
+### 3. Technical Details
+- [ ] Any new npm packages installed?
+- [ ] Database schema changes?
+- [ ] API endpoints created/modified?
+- [ ] Frontend components added?
+
+### 4. Azure Services
+- [ ] Cognitive Services configured?
+- [ ] Which services are active?
+- [ ] API keys stored in .env?
+
+### 5. Testing Status
+- [ ] What was tested?
+- [ ] Test results?
+- [ ] Performance metrics?
+
+### 6. Expert/Contractor Types Needed
+Food industry experts to consider:
+- Graphic designers (packaging/branding)
+- Regulatory compliance advisors
+- Kosher certification agencies
+- Halal certification agencies
+- Organic certification consultants
+- Gluten-free advisors
+- QA/Quality control experts
+- Food safety consultants
+- Import/export specialists
+- Logistics coordinators
+- Translation services
+- Nutritionist consultants
+- Packaging engineers
+- Supply chain analysts
+- Food photographers
+- Legal advisors (food law)
+- Insurance brokers
+- Lab testing services
+
+### 7. Immediate Next Steps
+What are the next 3 tasks to complete?
+1. ___________________________
+2. ___________________________
+3. ___________________________
+
+## 📎 Required Attachments
+Please provide if available:
+- [ ] Error logs or screenshots
+- [ ] Code snippets you were working on
+- [ ] API responses or test data
+- [ ] Design mockups or wireframes
+- [ ] Email templates drafted
+
+## 🎯 Specific Questions About Last Session
+[DYNAMIC QUESTIONS BASED ON STATE]
+
+---
+*Complete this questionnaire for optimal session continuity*
+"@
+    
+    return $questionnaire
+}
+
+# Function to save session state
+function Save-SessionState {
+    Write-Host "`n💾 SAVING COMPREHENSIVE STATE..." -ForegroundColor Yellow
+    
+    # Generate state document
+    $stateDoc = New-EnhancedStateDocument
+    
+    # Save main state
+    $statePath = "$($global:FoodXConfig.StatePath)\sessions\state_$($global:FoodXConfig.Timestamp).md"
+    $stateDoc | Out-File -FilePath $statePath -Encoding UTF8
+    
+    # Save to latest
+    $stateDoc | Out-File -FilePath "$($global:FoodXConfig.StatePath)\latest.md" -Encoding UTF8
+    
+    # Generate questionnaire
+    $questionnaire = New-AIContextQuestionnaire
+    $questionnaire | Out-File -FilePath "$($global:FoodXConfig.StatePath)\questionnaire_$($global:FoodXConfig.Timestamp).md" -Encoding UTF8
     
     # Copy to clipboard
     $stateDoc | Set-Clipboard
     
-    # Update Git repos with state
-    if ($DetailedCapture) {
-        Write-Host "`n📤 Updating repositories..." -ForegroundColor Yellow
-        
-        # Add state to docs repo
-        Push-Location $global:FoodXConfig.DocsPath
-        Copy-Item $stateFile -Destination ".\01-Progress\Chat-Sessions\$sessionId.md" -Force
-        git add .
-        git commit -m "State: Session $sessionId saved"
-        git push
-        Pop-Location
-        
-        Write-Host "✅ Repository updated!" -ForegroundColor Green
-    }
+    Write-Host "✅ State saved to: $statePath" -ForegroundColor Green
+    Write-Host "📋 State copied to clipboard!" -ForegroundColor Green
+    Write-Host "📝 Opening state document for your notes..." -ForegroundColor Yellow
     
-    Write-Host @"
-
-✅ ENHANCED STATE SAVED!
-📋 State copied to clipboard!
-📄 File: $stateFile
-
-📝 Opening for your notes...
-"@ -ForegroundColor Green
-
-    # Open in notepad for additional notes
-    Start-Process notepad $stateFile -Wait
+    # Open in notepad for notes
+    Start-Process notepad.exe -ArgumentList $statePath -Wait
     
-    # Re-read and copy updated file
-    $updatedState = Get-Content $stateFile -Raw
-    $updatedState | Set-Clipboard
+    # Update Git repos
+    Write-Host "`n🔄 Updating Git repositories..." -ForegroundColor Yellow
+    Update-GitRepos
     
-    Write-Host "`n📋 Updated state copied to clipboard!" -ForegroundColor Cyan
+    Write-Host "`n✅ SESSION STATE SAVED SUCCESSFULLY!" -ForegroundColor Green
 }
 
-# Enhanced New Chat Function (fxn)
-function New-FoodXChat {
-    Write-Host "`n📋 GENERATING ENHANCED CHAT MESSAGE..." -ForegroundColor Cyan
+# Function to update Git repositories
+function Update-GitRepos {
+    $repos = @(
+        @{Path = $global:FoodXConfig.DocsPath; Name = "Documentation"},
+        @{Path = $global:FoodXConfig.FrontendPath; Name = "Frontend"},
+        @{Path = $global:FoodXConfig.BackendPath; Name = "Backend"}
+    )
+    
+    foreach ($repo in $repos) {
+        if (Test-Path "$($repo.Path)\.git") {
+            Write-Host "  📂 Updating $($repo.Name)..." -ForegroundColor Cyan
+            Push-Location $repo.Path
+            
+            $changes = @(git status --porcelain 2>$null)
+            if ($changes.Count -gt 0) {
+                git add . 2>$null
+                git commit -m "Auto-save: Session $($global:FoodXConfig.Timestamp)" 2>$null
+                git push 2>$null
+                Write-Host "    ✓ Committed and pushed $($changes.Count) changes" -ForegroundColor Green
+            } else {
+                Write-Host "    ✓ No changes to commit" -ForegroundColor Gray
+            }
+            
+            Pop-Location
+        }
+    }
+}
+
+# Function to generate new chat message
+function New-ChatMessage {
+    Write-Host "`n📋 GENERATING NEW CHAT MESSAGE..." -ForegroundColor Yellow
     
     # Read latest state
-    $latestState = "$($global:FoodXConfig.QuickStatePath)\latest.md"
-    if (Test-Path $latestState) {
-        $stateContent = Get-Content $latestState -Raw
-    } else {
-        $stateContent = "No previous state found"
-    }
+    $latestState = Get-Content "$($global:FoodXConfig.StatePath)\latest.md" -Raw -ErrorAction SilentlyContinue
     
-    # Get current git status
-    $currentStatus = @{
-        Frontend = Get-GitRepoStatus -Path $global:FoodXConfig.FrontendPath
-        Backend = Get-GitRepoStatus -Path $global:FoodXConfig.BackendPath
-        Docs = Get-GitRepoStatus -Path $global:FoodXConfig.DocsPath
-    }
+    # Get latest questionnaire
+    $latestQuestionnaire = Get-ChildItem "$($global:FoodXConfig.StatePath)\questionnaire_*.md" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
     
-    $chatMessage = @"
-I'm continuing work on my FoodXchange B2B platform.
+    $newChatMessage = @"
+I'm continuing work on my FoodXchange B2B platform (FDX.trading).
 
-**Project**: FoodXchange (FDX) - B2B Food Trading Platform
-**Developer**: Udi Stryk (foodz)
-**Architecture**: React 18 + Node.js/Express + MongoDB + Azure AI
-**Goal**: Solo testing to achieve 50%+ productivity increase
+## 🚀 Project Context
+- **Developer**: Udi Stryk (foodz)
+- **Goal**: Solo MVP testing to achieve 50%+ productivity increase
+- **Architecture**: React + Node.js/Express + MongoDB + Azure AI
+- **Revenue Model**: Commission-based (buyers/sellers/contractors)
+- **Azure**: Using Founder's Hub (no budget limits)
 
-## 📊 Previous Session State
-[Attached: Enhanced state document]
+## 📊 Repository Locations
+- **Frontend**: https://github.com/foodXchange/foodxchange-app
+  Local: C:\Users\foodz\Documents\GitHub\Development\foodxchange-app
+- **Backend**: https://github.com/foodXchange/Foodxchange-backend
+  Local: C:\Users\foodz\Documents\GitHub\Development\Foodxchange-backend
+- **Docs**: https://github.com/foodXchange/FoodXchange-Documentation
+  Local: C:\Users\foodz\Documents\GitHub\Development\FoodXchange-Documentation
 
-## 🎯 Current Focus
-I'm working on the RFQ (Request for Quotation) system with AI integration, which is the first of 4 core modules:
-1. RFQ System (current)
-2. Adaptation Module
-3. Orders Management  
-4. Billing Module
+## 🏗️ 4-Module Roadmap
+1. **RFQ System** (Current Priority)
+   - AI/Machine vision for request creation
+   - Email templates for supplier outreach
+   - Multi-supplier price comparison
+   
+2. **Adaptation Module**
+   - Expert marketplace (designers, QA, compliance, etc.)
+   
+3. **Orders Management**
+   - PO/Invoice matching, shipment tracking
+   
+4. **Billing System**
+   - Commission tracking, revenue sharing
 
-## 🔧 Repository Status
-- **Frontend**: Branch '$($currentStatus.Frontend.Branch)' | $($currentStatus.Frontend.Changes) uncommitted changes
-- **Backend**: Branch '$($currentStatus.Backend.Branch)' | $($currentStatus.Backend.Changes) uncommitted changes
-- **Docs**: Branch '$($currentStatus.Docs.Branch)' | $($currentStatus.Docs.Changes) uncommitted changes
+## 📋 Latest State Document
+[Attached: state_*.md from $($global:FoodXConfig.StatePath)]
 
-## 📋 Specific Questions
-1. [Your specific question or task here]
+## ❓ Context Questions
+Please review the attached questionnaire and state document to understand what was accomplished in the previous session.
 
-## 🎨 Context from Last Session
-Please check:
-1. The attached state document for detailed progress
-2. Artifacts created in the last session
-3. Any code changes in the repositories
+## 🎯 Today's Goal
+[SPECIFY YOUR FOCUS FOR THIS SESSION]
 
-Please help me continue from where I left off. If you need more context, ask specific questions until you have 98% understanding of the project state.
+Please analyze the attached state document and help me continue development.
 "@
-
-    $chatMessage | Set-Clipboard
     
-    Write-Host @"
-
-✅ ENHANCED CHAT MESSAGE READY!
-📋 Message copied to clipboard!
-
-🎯 NEXT STEPS:
-1. Paste this message in your new chat
-2. Attach the latest state document
-3. Answer any follow-up questions from the AI
-4. Continue your development!
-
-📄 State document: $latestState
-"@ -ForegroundColor Green
+    $newChatMessage | Set-Clipboard
+    
+    Write-Host "✅ Chat message copied to clipboard!" -ForegroundColor Green
+    Write-Host "📎 Don't forget to attach:" -ForegroundColor Yellow
+    Write-Host "   - Latest state document" -ForegroundColor White
+    Write-Host "   - Questionnaire (if needed)" -ForegroundColor White
+    Write-Host "   - Any error logs or code snippets" -ForegroundColor White
 }
 
-# Start Environment Function (fxstart)
-function Start-FoodXEnvironment {
-    Write-Host @"
-
-🚀 STARTING FOODXCHANGE ENVIRONMENT...
-
-"@ -ForegroundColor Cyan
+# Function to start development environment
+function Start-DevelopmentEnvironment {
+    Write-Host "`n🚀 STARTING FOODXCHANGE ENVIRONMENT..." -ForegroundColor Yellow
     
-    # Change to backend directory first
-    cd $global:FoodXConfig.BackendPath
-    
-    # Check prerequisites
-    Write-Host "🔍 Checking prerequisites..." -ForegroundColor Yellow
-    
-    $checks = @{
-        "MongoDB" = (Get-Process mongod -ErrorAction SilentlyContinue)
-        "Node.js" = (node --version)
-        "NPM" = (npm --version)
+    # Check latest state and show summary
+    $latestState = Get-ChildItem "$($global:FoodXConfig.StatePath)\sessions\state_*.json" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+    if ($latestState) {
+        $state = Get-Content $latestState.FullName -Raw | ConvertFrom-Json
+        Write-Host "`n📊 Last Session Summary:" -ForegroundColor Cyan
+        Write-Host "   Date: $($state.Timestamp)" -ForegroundColor White
+        Write-Host "   Frontend: $($state.Frontend.Branch) branch" -ForegroundColor White
+        Write-Host "   Backend: $($state.Backend.Branch) branch" -ForegroundColor White
     }
     
-    # Start MongoDB if not running
-    if (-not $checks["MongoDB"]) {
-        Write-Host "▶️  Starting MongoDB..." -ForegroundColor Yellow
-        Start-Process powershell -ArgumentList "-NoExit", "-Command", "mongod" -WorkingDirectory "C:\"
-        Start-Sleep -Seconds 3
-    }
+    Write-Host "`n▶️  Starting MongoDB..." -ForegroundColor Yellow
+    Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd C:\; mongod"
     
-    # Start Backend
-    Write-Host "▶️  Starting Backend..." -ForegroundColor Yellow
-    Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$($global:FoodXConfig.BackendPath)'; npm start" 
-    
-    # Start Frontend
     Start-Sleep -Seconds 3
+    
+    Write-Host "▶️  Starting Backend..." -ForegroundColor Yellow
+    Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$($global:FoodXConfig.BackendPath)'; npm start"
+    
+    Start-Sleep -Seconds 3
+    
     Write-Host "▶️  Starting Frontend..." -ForegroundColor Yellow
     Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$($global:FoodXConfig.FrontendPath)'; npm start"
     
-    # Open VS Code
     Write-Host "▶️  Opening VS Code..." -ForegroundColor Yellow
-    code $global:FoodXConfig.FrontendPath
-    code $global:FoodXConfig.BackendPath
-    code $global:FoodXConfig.DocsPath
+    Start-Process code -ArgumentList $global:FoodXConfig.FrontendPath
+    Start-Process code -ArgumentList $global:FoodXConfig.BackendPath
+    Start-Process code -ArgumentList $global:FoodXConfig.DocsPath
     
-    # Wait and open browser
-    Write-Host "⏳ Waiting for services to start..." -ForegroundColor Yellow
-    Start-Sleep -Seconds 8
-    Start-Process "http://localhost:3000"
+    Write-Host "`n⏳ Waiting for services to start..." -ForegroundColor Yellow
+    Start-Sleep -Seconds 5
     
-    Write-Host @"
-
-✅ ENVIRONMENT READY!
-📱 Frontend: http://localhost:3000
-🔧 Backend: http://localhost:5000
-🗄️  MongoDB: mongodb://localhost:27017
-
-💡 Daily Productivity Tips:
-- Start with 'foodx-status' to check system health
-- Use 'foodx-sync' to sync all repos before starting
-- Save state every 2 hours with 'fxs'
-- Document decisions in the state notes
-
-"@ -ForegroundColor Green
+    Write-Host "`n✅ ENVIRONMENT READY!" -ForegroundColor Green
+    Write-Host "📱 Frontend: http://localhost:3000" -ForegroundColor Cyan
+    Write-Host "🔧 Backend: http://localhost:5000" -ForegroundColor Cyan
+    Write-Host "🗄️  MongoDB: mongodb://localhost:27017" -ForegroundColor Cyan
+    
+    # Show productivity tips
+    Show-ProductivityTips
 }
 
-# Git Repository Status Helper
-function Get-GitRepoStatus {
-    param([string]$Path)
+# Function to show productivity tips
+function Show-ProductivityTips {
+    Write-Host "`n📈 PRODUCTIVITY TIPS:" -ForegroundColor Yellow
+    Write-Host "1. Use 'fxs' to save state before ending session" -ForegroundColor White
+    Write-Host "2. Use 'fxn' to generate new chat context" -ForegroundColor White
+    Write-Host "3. Commit frequently with descriptive messages" -ForegroundColor White
+    Write-Host "4. Update state document with accomplishments" -ForegroundColor White
+    Write-Host "5. Use the questionnaire for better AI context" -ForegroundColor White
     
-    if (!(Test-Path "$Path\.git")) {
-        return @{
-            Branch = "not-a-git-repo"
-            Changes = 0
-            LastCommit = "N/A"
-        }
-    }
-    
-    Push-Location $Path
-    $branch = git branch --show-current 2>$null
-    $changes = (git status --porcelain 2>$null | Measure-Object).Count
-    $lastCommit = git log -1 --pretty=format:"%h - %s" 2>$null
-    Pop-Location
-    
-    return @{
-        Branch = $branch
-        Changes = $changes
-        LastCommit = $lastCommit
-    }
+    Write-Host "`n🔄 DAILY ROUTINE:" -ForegroundColor Yellow
+    Write-Host "Morning: fxstart → Review state → Plan tasks" -ForegroundColor White
+    Write-Host "During: Regular commits → Update notes" -ForegroundColor White
+    Write-Host "Evening: fxs → Document progress → Plan tomorrow" -ForegroundColor White
 }
 
-# Sync all repositories
-function Sync-FoodXRepos {
-    Write-Host "`n🔄 SYNCING ALL REPOSITORIES..." -ForegroundColor Cyan
-    
-    $repos = @(
-        @{Name="Frontend"; Path=$global:FoodXConfig.FrontendPath},
-        @{Name="Backend"; Path=$global:FoodXConfig.BackendPath},
-        @{Name="Documentation"; Path=$global:FoodXConfig.DocsPath}
-    )
-    
-    foreach ($repo in $repos) {
-        Write-Host "`n📦 $($repo.Name)..." -ForegroundColor Yellow
-        Push-Location $repo.Path
-        
-        # Check for changes
-        $status = git status --porcelain
-        if ($status) {
-            Write-Host "  📝 Committing changes..." -ForegroundColor Yellow
-            git add .
-            git commit -m "Auto-sync: $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
-        }
-        
-        # Pull and push
-        Write-Host "  ⬇️  Pulling latest..." -ForegroundColor Yellow
-        git pull
-        Write-Host "  ⬆️  Pushing changes..." -ForegroundColor Yellow
-        git push
-        
-        Pop-Location
-        Write-Host "  ✅ $($repo.Name) synced!" -ForegroundColor Green
-    }
-    
-    Write-Host "`n✅ ALL REPOSITORIES SYNCED!" -ForegroundColor Green
+# Main execution
+switch ($Command.ToLower()) {
+    "save" { Save-SessionState }
+    "new" { New-ChatMessage }
+    "start" { Start-DevelopmentEnvironment }
+    "continue" { Start-DevelopmentEnvironment }
+    default { Save-SessionState }
 }
-
-# Check system status
-function Get-FoodXStatus {
-    Write-Host @"
-
-╔═══════════════════════════════════════════════════════════════╗
-║                  FOODXCHANGE SYSTEM STATUS                    ║
-╚═══════════════════════════════════════════════════════════════╝
-
-"@ -ForegroundColor Cyan
-    
-    # Check services
-    $services = @{
-        "MongoDB" = (Get-Process mongod -ErrorAction SilentlyContinue) -ne $null
-        "Backend" = (Test-NetConnection -ComputerName localhost -Port 5000 -InformationLevel Quiet)
-        "Frontend" = (Test-NetConnection -ComputerName localhost -Port 3000 -InformationLevel Quiet)
-    }
-    
-    Write-Host "🔧 SERVICES:" -ForegroundColor Yellow
-    foreach ($service in $services.GetEnumerator()) {
-        $status = if ($service.Value) { "✅ Running" } else { "❌ Stopped" }
-        $color = if ($service.Value) { "Green" } else { "Red" }
-        Write-Host "  $($service.Key): $status" -ForegroundColor $color
-    }
-    
-    # Check repositories
-    Write-Host "`n📦 REPOSITORIES:" -ForegroundColor Yellow
-    $repos = @(
-        @{Name="Frontend"; Path=$global:FoodXConfig.FrontendPath},
-        @{Name="Backend"; Path=$global:FoodXConfig.BackendPath},
-        @{Name="Docs"; Path=$global:FoodXConfig.DocsPath}
-    )
-    
-    foreach ($repo in $repos) {
-        $status = Get-GitRepoStatus -Path $repo.Path
-        Write-Host "  $($repo.Name): $($status.Branch) | $($status.Changes) changes" -ForegroundColor Cyan
-    }
-    
-    # Show roadmap progress
-    Write-Host "`n📈 ROADMAP PROGRESS:" -ForegroundColor Yellow
-    Write-Host "  1. RFQ System: 🔄 In Development (30%)" -ForegroundColor Cyan
-    Write-Host "  2. Adaptation: ⏳ Planned" -ForegroundColor Gray
-    Write-Host "  3. Orders Mgmt: ⏳ Planned" -ForegroundColor Gray
-    Write-Host "  4. Billing: ⏳ Planned" -ForegroundColor Gray
-    
-    Write-Host "`n💡 Next: Use 'foodx-help' for all commands" -ForegroundColor Green
-}
-
-# Enhanced help function
-function Show-FoodXHelp {
-    Write-Host @"
-
-╔═══════════════════════════════════════════════════════════════╗
-║                  FOODXCHANGE COMMAND CENTER                   ║
-╚═══════════════════════════════════════════════════════════════╝
-
-🎯 CORE COMMANDS:
-  fxs, foodx-save      💾 Save enhanced state with AI context
-  fxn, foodx-new       🆕 Generate new chat with full context  
-  fxstart, foodx-start ▶️  Start complete dev environment
-  fxsync, foodx-sync   🔄 Sync all Git repositories
-
-📊 MONITORING:
-  fxstatus, foodx-status  📈 Check system health & progress
-  fxlog, foodx-log        📝 View session history
-  fxrepo, foodx-repo      🔍 Check repository status
-
-🛠️ UTILITIES:
-  fxcd-front    📁 Go to Frontend directory
-  fxcd-back     📁 Go to Backend directory  
-  fxcd-docs     📁 Go to Documentation directory
-  fxtest        🧪 Run all tests
-  fxbuild       🏗️  Build all projects
-
-📈 PRODUCTIVITY WORKFLOW:
-  
-  🌅 MORNING ROUTINE:
-  1. fxstatus    - Check system health
-  2. fxsync      - Sync all repos
-  3. fxstart     - Start environment
-  
-  💾 EVERY 2 HOURS:
-  1. fxs         - Save state with notes
-  
-  🌙 END OF DAY:
-  1. fxs         - Final state save
-  2. fxsync      - Push all changes
-  
-💡 TIPS:
-  • Always run fxs before closing chat
-  • Use detailed notes in state saves
-  • Check fxstatus if something seems wrong
-  • Run fxsync before starting new features
-
-📚 DOCUMENTATION:
-  • State files: $($global:FoodXConfig.QuickStatePath)
-  • Sessions: $($global:FoodXConfig.SessionsPath)
-  • Artifacts: $($global:FoodXConfig.ArtifactsPath)
-
-🚀 CURRENT FOCUS: RFQ System with AI Integration
-
-"@ -ForegroundColor Cyan
-}
-
-# Directory navigation shortcuts
-function Set-FoodXFrontend { cd $global:FoodXConfig.FrontendPath; pwd }
-function Set-FoodXBackend { cd $global:FoodXConfig.BackendPath; pwd }
-function Set-FoodXDocs { cd $global:FoodXConfig.DocsPath; pwd }
-
-# View session history
-function Get-FoodXHistory {
-    Write-Host "`n📜 FOODXCHANGE SESSION HISTORY" -ForegroundColor Cyan
-    Write-Host "══════════════════════════════" -ForegroundColor Cyan
-    
-    $sessions = Get-ChildItem "$($global:FoodXConfig.SessionsPath)\*.md" | Sort-Object LastWriteTime -Descending | Select-Object -First 10
-    
-    foreach ($session in $sessions) {
-        $content = Get-Content $session.FullName -First 20
-        $dateMatch = $content | Select-String "Generated: (.+)" | Select-Object -First 1
-        
-        Write-Host "`n📄 $($session.BaseName)" -ForegroundColor Yellow
-        if ($dateMatch) {
-            Write-Host "   $($dateMatch.Matches[0].Groups[1].Value)" -ForegroundColor Gray
-        }
-    }
-    
-    Write-Host "`n💡 Use 'code <session-file>' to view details" -ForegroundColor Green
-}
-
-# Initialize the system
-Initialize-FoodXDirectories
-
-# Create aliases - Short versions
-Set-Alias -Name fxs -Value Save-FoodXState -Scope Global
-Set-Alias -Name fxn -Value New-FoodXChat -Scope Global
-Set-Alias -Name fxstart -Value Start-FoodXEnvironment -Scope Global
-Set-Alias -Name fxsync -Value Sync-FoodXRepos -Scope Global
-Set-Alias -Name fxstatus -Value Get-FoodXStatus -Scope Global
-Set-Alias -Name fxhelp -Value Show-FoodXHelp -Scope Global
-Set-Alias -Name fxlog -Value Get-FoodXHistory -Scope Global
-Set-Alias -Name fxcd-front -Value Set-FoodXFrontend -Scope Global
-Set-Alias -Name fxcd-back -Value Set-FoodXBackend -Scope Global
-Set-Alias -Name fxcd-docs -Value Set-FoodXDocs -Scope Global
-
-# Create aliases - Long versions
-Set-Alias -Name foodx-save -Value Save-FoodXState -Scope Global
-Set-Alias -Name foodx-new -Value New-FoodXChat -Scope Global
-Set-Alias -Name foodx-start -Value Start-FoodXEnvironment -Scope Global
-Set-Alias -Name foodx-sync -Value Sync-FoodXRepos -Scope Global
-Set-Alias -Name foodx-status -Value Get-FoodXStatus -Scope Global
-Set-Alias -Name foodx-help -Value Show-FoodXHelp -Scope Global
-Set-Alias -Name foodx-log -Value Get-FoodXHistory -Scope Global
-Set-Alias -Name foodx-repo -Value Get-GitRepoStatus -Scope Global
-
-# Show startup message with all commands
-Clear-Host
-Write-Host @"
-
-╔═══════════════════════════════════════════════════════════════╗
-║              🍔 FOODXCHANGE ENHANCED STATE SYSTEM 🍔          ║
-║                        Version 2.0                            ║
-╚═══════════════════════════════════════════════════════════════╝
-
-"@ -ForegroundColor Cyan
-
-Write-Host "✅ FoodXchange Enhanced System Loaded!" -ForegroundColor Green
-Write-Host "📍 Current Directory: $(Get-Location)" -ForegroundColor Yellow
-
-Write-Host @"
-
-🚀 QUICK COMMANDS:
-   Save State:  fxs        New Chat:    fxn
-   Start Work:  fxstart    Sync Repos:  fxsync
-   Status:      fxstatus   Help:        fxhelp
-
-💡 PRODUCTIVITY TIP: Start with 'fxstatus' to check system health
-
-🎯 CURRENT SPRINT: RFQ System with AI Integration (Module 1 of 4)
-
-"@ -ForegroundColor Cyan
-
-# Auto-check status on load
-Get-FoodXStatus
-
-Write-Host "`n📝 Type 'fxhelp' for all commands and productivity tips" -ForegroundColor Green
-Write-Host "══════════════════════════════════════════════════════════════" -ForegroundColor DarkGray
