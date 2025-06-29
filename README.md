@@ -1,36 +1,27 @@
-# FoodXchange Documentation Hub
+# FoodXchange Documentation
 
-Welcome to the FoodXchange B2B Platform documentation repository.
+This directory contains comprehensive documentation for the FoodXchange B2B food trading platform.
 
-## 📁 Structure Overview
+## 📁 Structure
 
-### 01-Progress
-Track daily development progress, chat sessions, and milestones.
+- **architecture/** - System architecture and technical design
+- **database/** - MongoDB schemas and data models  
+- **ai-services/** - Azure AI integration guides
+- **api/** - Backend API documentation
+- **deployment/** - Deployment and infrastructure guides
+- **business/** - Business requirements and processes
+- **user-guides/** - End-user documentation
 
-### 02-Architecture
-System architecture, design decisions, and API specifications.
+## 🚀 Quick Commands
 
-### 03-Scripts
-PowerShell scripts, deployment automation, and utilities.
+Generate documentation using PowerShell commands:
 
-### 04-Development
-Development guides, setup instructions, and coding standards.
+- xdocarchitecture - Generate architecture documentation
+- xdocschema - Generate database schema documentation  
+- xdocai - Generate AI services documentation
 
-### 05-Backups
-Code snapshots, database schemas, and configuration backups.
+## 📝 Maintenance
 
-### 06-Planning
-Project roadmaps, user stories, and meeting notes.
+Documentation is auto-generated and should be updated regularly using the PowerShell commands above.
 
-### 07-Resources
-External documentation, research materials, and tutorials.
-
-## 🚀 Quick Links
-
-- [Current Status](01-Progress/current-status.md)
-- [Architecture Overview](02-Architecture/overview.md)
-- [Setup Guide](04-Development/Setup-Guides/initial-setup.md)
-- [Scripts Index](03-Scripts/README.md)
-
-## 📅 Last Updated
-2025-06-27 08:13:16
+Last Updated: 2025-06-29 14:35:42
